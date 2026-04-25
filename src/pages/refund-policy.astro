@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout
+  title="Refund Policy – Heaven Designs"
+  description="Heaven Designs' refund policy. We offer 100% refunds anytime before service delivery. Learn how to request a refund and our processing timeline."
+  canonical="https://heavendesigns.in/refund-policy/"
+  noindex={true}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Refund Policy"
+      subtitle="We're committed to your satisfaction — 100% refund available before service delivery"
+      breadcrumbs={[{ label: 'Refund Policy' }]}
+    />
+
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-3xl mx-auto" style="font-family:'Poppins',sans-serif">
+        <p class="text-gray-500 text-sm mb-8">Last updated: November 2024</p>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">Our Commitment</h2>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Heaven Designs is committed to exceptional service and customer comfort. We offer a <strong>100% refund of your payment anytime before services are delivered</strong>. If you cancel your order before we begin work, you will receive a full refund — no questions asked.
+        </p>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">How to Request a Refund</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">To initiate a refund, please follow these steps:</p>
+        <ol class="space-y-4 mb-6">
+          {[
+            { step: '1', title: 'Submit a cancellation request', desc: 'Send an email to service@heavendesigns.in with your cancellation request before work has commenced on your project.' },
+            { step: '2', title: 'Include your details', desc: 'Provide your full name, contact number, and a copy of your payment receipt or invoice in the email.' },
+            { step: '3', title: 'Processing timeline', desc: 'Refunds are processed within 7–8 business working days from the date of your confirmed cancellation request.' },
+            { step: '4', title: 'Transaction charges', desc: 'Standard payment gateway transaction charges may be deducted where applicable.' },
+          ].map((item) => (
+            <li class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <div class="w-8 h-8 bg-[#149C68] rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                {item.step}
+              </div>
+              <div>
+                <p class="font-bold text-gray-900 text-sm mb-1" style="font-family:'Montserrat',sans-serif">{item.title}</p>
+                <p class="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">Advance Payments</h2>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Early or advance payments are designed to provide customers access to special offers and complimentary resources. If you make an advance payment and wish to cancel before work begins, the standard refund policy applies.
+        </p>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">Refund Eligibility</h2>
+        <div class="space-y-3 mb-6">
+          {[
+            { eligible: true, text: 'Cancellation before work commencement — full refund' },
+            { eligible: true, text: 'Technical error or duplicate payment — full refund' },
+            { eligible: false, text: 'Cancellation after design work has begun — partial refund at our discretion' },
+            { eligible: false, text: 'Completed and delivered projects — not eligible for refund' },
+          ].map((item) => (
+            <div class="flex items-start gap-3">
+              <div class={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${item.eligible ? 'bg-[#149C68]' : 'bg-red-400'}`}>
+                {item.eligible
+                  ? <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  : <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                }
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">Contact Us</h2>
+        <p class="text-gray-600 leading-relaxed">
+          For refund requests or questions about this policy, please contact us at{' '}
+          <a href="mailto:service@heavendesigns.in" class="text-[#149C68] hover:underline">service@heavendesigns.in</a>{' '}
+          or call us at{' '}
+          <a href="tel:+919081100297" class="text-[#149C68] hover:underline">+91 90811 00297</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

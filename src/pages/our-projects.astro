@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Our Projects – Heaven Designs",
+  "url": "https://heavendesigns.in/our-projects/"
+};
+
+const projects = [
+  { image: '/images/projects/proj-1.webp', title: '3D Pre-Design — Residential Rooftop' },
+  { image: '/images/projects/proj-2.webp', title: 'Ground Mount Solar — 1MW Installation' },
+  { image: '/images/projects/proj-3.webp', title: 'Commercial Rooftop — Engineering Design' },
+  { image: '/images/projects/proj-4.webp', title: 'Utility Scale — Post Design' },
+  { image: '/images/projects/proj-5.webp', title: 'Industrial Rooftop — Structural Design' },
+  { image: '/images/projects/proj-6.webp', title: 'MW Scale — Project Management' },
+];
+
+const highlights = [
+  { title: 'Solar Pre-Design', desc: 'Accurate 3D models for sales & planning' },
+  { title: 'Solar Post Design', desc: 'Detailed engineering for EPC execution' },
+  { title: 'Ground Mount Design', desc: 'Utility scale structural & civil design' },
+  { title: 'Industrial Rooftop', desc: 'CEIG drawings & load calculations' },
+];
+---
+
+<Layout
+  title="Our Projects – Heaven Designs | Solar Design Case Studies"
+  description="Explore Heaven Designs' portfolio of solar design projects — residential rooftop, commercial, and utility-scale ground mount installations worldwide."
+  canonical="https://heavendesigns.in/our-projects/"
+  schema={schema}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Our Projects"
+      subtitle="A showcase of precision solar engineering across every project type and scale."
+      breadcrumbs={[{ label: 'Our Projects' }]}
+    />
+
+    <!-- Section 1: Case Studies -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+          — PORTFOLIO
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4 leading-tight" style="font-family:'Montserrat',sans-serif">
+          Case Studies
+        </h2>
+        <p class="text-gray-600 leading-relaxed max-w-2xl mb-12" style="font-family:'Poppins',sans-serif">
+          From residential rooftops to utility-scale ground mount installations, our portfolio demonstrates precision engineering across every project type.
+        </p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <div class="group relative overflow-hidden rounded-xl shadow-sm border border-gray-100 hover:border-[#149C68] hover:shadow-lg transition-all duration-300 cursor-pointer">
+              <div class="h-52 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <!-- Title overlay at bottom -->
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-4 py-4">
+                <h3 class="text-white font-bold text-sm leading-snug" style="font-family:'Montserrat',sans-serif">
+                  {project.title}
+                </h3>
+              </div>
+              <!-- Green hover border accent -->
+              <div class="absolute inset-0 rounded-xl ring-0 group-hover:ring-2 group-hover:ring-[#149C68] transition-all duration-300 pointer-events-none"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Why sections -->
+    <section class="py-16 px-4 sm:px-6 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid sm:grid-cols-2 gap-8">
+          {[
+            {
+              title: 'Why Solar Pre Design?',
+              desc: 'Solar Pre-Design is the critical first step that gives EPC companies accurate project proposals, detailed 3D visualizations, shading analysis, PVsyst energy estimates and ROI projections — before any installation begins. It builds client confidence and increases sales closure rates.',
+              icon: '☀️',
+            },
+            {
+              title: 'Why Solar Post Design?',
+              desc: 'Solar Post-Design provides the complete detailed engineering package required for actual project execution. It includes construction-ready drawings, CEIG electrical diagrams, structural calculations, and full permit documentation that contractors need on site.',
+              icon: '📐',
+            },
+            {
+              title: 'Why Solar Detailed Engineering Design for Industrial Rooftop?',
+              desc: 'Industrial rooftop projects require precise structural load analysis, roof penetration details, and CEIG compliance. Our detailed engineering ensures every MW-scale rooftop project meets structural safety standards and regulatory requirements.',
+              icon: '🏭',
+            },
+            {
+              title: 'Why Solar Detailed Engineering Design for Ground Mount Solar?',
+              desc: 'Ground mount solar farms demand comprehensive civil and structural engineering — from pile foundation design to DC cable trenching layouts. Our end-to-end engineering packages ensure your ground mount project is built right, first time.',
+              icon: '🌱',
+            },
+          ].map((item) => (
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:border-[#149C68]/30 hover:shadow-md transition-all duration-300">
+              <div class="text-3xl mb-4">{item.icon}</div>
+              <h3 class="text-xl font-black text-gray-900 mb-4 leading-snug" style="font-family:'Montserrat',sans-serif">
+                {item.title}
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Service Highlights -->
+    <section class="py-14 px-4 sm:px-6 bg-[#149C68]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {highlights.map((item) => (
+            <div class="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-colors duration-300">
+              <div class="w-10 h-10 bg-[#FFA91F] rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-white font-bold text-base mb-2" style="font-family:'Montserrat',sans-serif">{item.title}</h3>
+              <p class="text-white/80 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>

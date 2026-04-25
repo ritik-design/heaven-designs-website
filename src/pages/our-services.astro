@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Heaven Designs Services",
+  "url": "https://heavendesigns.in/our-services/",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Solar 3D Pre-Design", "url": "https://heavendesigns.in/solar-3d-pre-design/"},
+    {"@type": "ListItem", "position": 2, "name": "Solar Post-Design", "url": "https://heavendesigns.in/solar-post-design/"},
+    {"@type": "ListItem", "position": 3, "name": "Rooftop Engineering Design", "url": "https://heavendesigns.in/solar-rooftop-detailed-engineering-design/"},
+    {"@type": "ListItem", "position": 4, "name": "Ground Mount Design", "url": "https://heavendesigns.in/solar-ground-mount-design/"},
+    {"@type": "ListItem", "position": 5, "name": "MW Scale Project Management", "url": "https://heavendesigns.in/mw-scale-project-management-consultancy/"},
+    {"@type": "ListItem", "position": 6, "name": "Solar Permit Design", "url": "https://heavendesigns.in/solar-permit-design/"}
+  ]
+};
+
+const services = [
+  {
+    image: "/images/services/service-1.webp",
+    title: "Solar 3D Pre-Design",
+    desc: "Accurate 3D solar layouts using SketchUp & BricsCAD. Includes shading analysis, PVsyst reports, and ROI projections for residential, commercial, and ground mount projects.",
+    href: "/solar-3d-pre-design/",
+  },
+  {
+    image: "/images/services/service-2.webp",
+    title: "MW Scale Detailed Engineering Design",
+    desc: "Complete detailed engineering packages for utility-scale projects. CEIG drawings, structural calculations, single-line diagrams, and full permit documentation.",
+    href: "/solar-rooftop-detailed-engineering-design/",
+  },
+  {
+    image: "/images/services/service-3.webp",
+    title: "MW Scale Project Management",
+    desc: "End-to-end project management consultancy for utility-scale solar. From feasibility to commissioning — procurement, construction management, and QA/QC.",
+    href: "/mw-scale-project-management-consultancy/",
+  },
+  {
+    image: "/images/services/service-4.webp",
+    title: "Solar Civil & Structural Engineering",
+    desc: "STAAD Pro structural analysis, foundation design, and civil engineering for solar structures. PEB designs, MS & GI structure calculations.",
+    href: "/solar-civil-and-structural-engineering/",
+  },
+  {
+    image: "/images/services/service-5.webp",
+    title: "Site Survey & Land Feasibility",
+    desc: "Contour mapping surveys, soil testing, geo-technical reports, and Earth Resistivity Reports across India. Accurate data for reliable solar designs.",
+    href: "/site-survey-land-feasibility-services/",
+  },
+  {
+    image: "/images/services/service-6.webp",
+    title: "Solar Permit Design",
+    desc: "US/Canada residential and commercial solar permit plan sets. Site plans, roof plans, single-line diagrams, string layouts, and equipment specifications.",
+    href: "/solar-permit-design/",
+  },
+];
+
+const stats = [
+  { number: "50+", label: "Expert Engineers" },
+  { number: "300+", label: "EPC Clients Served" },
+  { number: "102+ MW", label: "Designed Globally" },
+  { number: "15+", label: "Countries Served" },
+];
+---
+
+<Layout
+  title="Our Services – Heaven Designs | Solar Design & Engineering Services"
+  description="Comprehensive solar design, engineering & consultancy services — 3D Pre-Design, Post Design, Ground Mount, Rooftop Engineering, Permit Design, Civil Structural & more."
+  canonical="https://heavendesigns.in/our-services/"
+  schema={schema}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Our Services"
+      subtitle="End-to-end solar design, engineering and consultancy — delivered by 50+ expert engineers worldwide."
+      breadcrumbs={[{ label: "Our Services" }]}
+    />
+
+    <!-- Section 1: Services Intro -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-sm font-semibold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Poppins',sans-serif">
+          — WHAT WE OFFER
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-black text-[#0f172a] mb-6" style="font-family:'Montserrat',sans-serif">
+          Our Services
+        </h2>
+        <p class="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed" style="font-family:'Poppins',sans-serif">
+          We provide end-to-end solar design, engineering and consultancy services to EPC companies worldwide. From initial 3D pre-design to final permit drawings, our 50+ engineers deliver precision at every stage.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Service Cards Grid -->
+    <section class="pb-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <article class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col border border-gray-100">
+              <div class="border-t-4 border-[#149C68]"></div>
+              <img
+                src={service.image}
+                alt={service.title}
+                class="w-full h-48 object-cover"
+                loading="lazy"
+              />
+              <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-lg font-bold text-[#0f172a] mb-3" style="font-family:'Montserrat',sans-serif">
+                  {service.title}
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed flex-1" style="font-family:'Poppins',sans-serif">
+                  {service.desc}
+                </p>
+                <a
+                  href={service.href}
+                  class="inline-block mt-5 text-sm font-semibold text-[#149C68] hover:text-[#0f7a50] transition-colors"
+                  style="font-family:'Poppins',sans-serif"
+                >
+                  Read More →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Why Choose Us -->
+    <section class="py-16 bg-[#149C68]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-12" style="font-family:'Montserrat',sans-serif">
+          Why Choose Heaven Designs?
+        </h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {stats.map((stat) => (
+            <div class="bg-white rounded-xl p-6 shadow-md">
+              <div class="text-3xl sm:text-4xl font-black text-[#149C68] mb-2" style="font-family:'Montserrat',sans-serif">
+                {stat.number}
+              </div>
+              <div class="text-sm font-semibold text-gray-600 uppercase tracking-wide" style="font-family:'Poppins',sans-serif">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>

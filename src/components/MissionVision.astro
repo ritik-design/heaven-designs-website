@@ -1,0 +1,77 @@
+---
+---
+
+<section class="py-20 bg-gray-50 border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <p class="section-label">Mission & Vision</p>
+      <h2 class="text-3xl sm:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
+        Our Mission and Vision
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10 items-start mb-16">
+      <!-- Mission photo + text -->
+      <div class="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+        <div class="h-52 overflow-hidden">
+          <img src="/images/mission-1.webp" alt="Our Mission" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-bold text-[#149C68] mb-3" style="font-family:'Montserrat',sans-serif">Our Mission</h3>
+          <p class="text-[#334155] leading-relaxed text-sm">
+            To digitise design and engineering for solar and construction companies worldwide, enabling them to build more, faster, and smarter through the perfect combination of expert services and innovative technology.
+          </p>
+        </div>
+      </div>
+
+      <!-- Vision photo + text -->
+      <div class="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+        <div class="h-52 overflow-hidden">
+          <img src="/images/mission-2.webp" alt="Our Vision" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-bold text-[#149C68] mb-3" style="font-family:'Montserrat',sans-serif">Our Vision</h3>
+          <p class="text-[#334155] leading-relaxed text-sm">
+            To become the world's most trusted design engineering and technology company, and to help the world build and sustain its future through the perfect combination of expert services and innovative technology.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="text-center mb-10">
+      <p class="section-label">Core Values</p>
+      <h2 class="text-3xl sm:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
+        Our Core Values
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {[
+        {
+          title: 'Integrity',
+          desc: 'We operate with the highest level of honesty and transparency. Our commitment to ethical practices ensures that we build trust and deliver on our promises.',
+          img: '/images/value-icon-1.webp',
+        },
+        {
+          title: 'Customer Satisfaction',
+          desc: 'Our clients are at the heart of everything we do. We strive to exceed expectations by providing exceptional service and solutions that meet their needs.',
+          img: '/images/value-icon-2.webp',
+        },
+        {
+          title: 'Growing Together',
+          desc: 'We believe in collaborative growth and mutual success. By working closely with our clients, employees, and partners, we aim to achieve shared success and drive positive change.',
+          img: '/images/value-icon-3.webp',
+        },
+      ].map((v) => (
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-[#149C68] flex items-center justify-center mx-auto mb-5 overflow-hidden">
+            <img src={v.img} alt={v.title} class="w-10 h-10 object-contain" />
+          </div>
+          <h3 class="text-lg font-bold text-[#149C68] mb-3" style="font-family:'Montserrat',sans-serif">{v.title}</h3>
+          <p class="text-[#334155] leading-relaxed text-sm">{v.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

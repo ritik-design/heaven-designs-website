@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Electrical CEIG Drawings",
+  "provider": { "@type": "Organization", "name": "Heaven Designs Private Limited" },
+  "description": "CEIG-compliant electrical drawings for net metering and gross metering solar systems. Single line diagrams, cable layouts, earthing layouts and approval documentation.",
+  "url": "https://heavendesigns.in/electrical-ceig-drawings/"
+};
+
+const requiredData = [
+  { label: '2D Layout', desc: 'Site plan showing panel placement and roof dimensions' },
+  { label: 'Panel Details', desc: 'Brand, wattage, and number of solar panels' },
+  { label: 'Inverter Details', desc: 'Brand, rating, and configuration type' },
+  { label: 'Meter Type', desc: 'AL/CU meter specification for net/gross metering' },
+  { label: 'DG Set Rating', desc: 'Diesel generator capacity if applicable' },
+  { label: 'Transformer Rating', desc: 'HT/LT transformer specifications' },
+  { label: 'Cable Type', desc: 'GI strip or CU cable specifications' },
+];
+
+const deliverables = [
+  { icon: '⚡', title: 'Single Line Diagram (SLD)', desc: 'Complete electrical single line diagram showing panel strings, inverters, meters, and grid connection points.' },
+  { icon: '📐', title: 'Cable Layout Drawing', desc: 'Detailed cable routing plan with cable sizing, conduit paths, and junction box placement.' },
+  { icon: '🌍', title: 'Earthing Layout', desc: 'Earthing and bonding diagram as per IS standards, including GI strip/copper cable earthing network.' },
+  { icon: '📋', title: 'Equipment Schedule', desc: 'Bill of materials listing all electrical components with makes, models, and technical ratings.' },
+  { icon: '✅', title: 'CEIG Approval Set', desc: 'Stamped drawings ready for submission to CEIG/DISCOM for net metering or gross metering approval.' },
+  { icon: '📄', title: 'Load Calculations', desc: 'Detailed load flow and short circuit calculations supporting the CEIG drawing submission.' },
+];
+---
+
+<Layout
+  title="Electrical CEIG Drawings – Heaven Designs | Solar Permit & Approval Drawings"
+  description="Get CEIG-compliant electrical drawings for solar net metering and gross metering systems. Heaven Designs delivers SLDs, cable layouts, earthing drawings, and DISCOM approval documentation."
+  canonical="https://heavendesigns.in/electrical-ceig-drawings/"
+  schema={schema}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Electrical (CEIG) Drawings"
+      subtitle="CEIG-compliant electrical design drawings for net metering & gross metering solar installations"
+      breadcrumbs={[{ label: 'Services', href: '/our-services/' }, { label: 'Electrical CEIG Drawings' }]}
+    />
+
+    <!-- Intro Section -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+              — CEIG DRAWINGS
+            </p>
+            <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-6 leading-tight" style="font-family:'Montserrat',sans-serif">
+              DISCOM-Ready Electrical Drawings for Solar Approval
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4" style="font-family:'Poppins',sans-serif">
+              We believe that solar is for everyone — whether residential, commercial, or industrial. Permits and CEI drawings are required only for net metering and gross metering system installations, not for off-grid systems.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-6" style="font-family:'Poppins',sans-serif">
+              Heaven Designs prepares accurate, stamped CEIG electrical drawings that meet state DISCOM requirements, reducing back-and-forth and speeding up your metering approval.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span class="bg-[#149C68]/10 text-[#149C68] text-sm font-semibold px-4 py-2 rounded-full" style="font-family:'Poppins',sans-serif">Net Metering</span>
+              <span class="bg-[#149C68]/10 text-[#149C68] text-sm font-semibold px-4 py-2 rounded-full" style="font-family:'Poppins',sans-serif">Gross Metering</span>
+              <span class="bg-[#149C68]/10 text-[#149C68] text-sm font-semibold px-4 py-2 rounded-full" style="font-family:'Poppins',sans-serif">CEIG Compliant</span>
+              <span class="bg-[#149C68]/10 text-[#149C68] text-sm font-semibold px-4 py-2 rounded-full" style="font-family:'Poppins',sans-serif">DISCOM Approved</span>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-[#149C68]/5 to-[#149C68]/10 rounded-2xl p-8 border border-[#149C68]/20">
+            <h3 class="text-xl font-black text-gray-900 mb-6" style="font-family:'Montserrat',sans-serif">
+              Data Required from Client
+            </h3>
+            <div class="space-y-4">
+              {requiredData.map((item, i) => (
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 bg-[#149C68] rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0 mt-0.5">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <p class="font-bold text-gray-900 text-sm" style="font-family:'Montserrat',sans-serif">{item.label}</p>
+                    <p class="text-gray-500 text-xs leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deliverables -->
+    <section class="py-16 px-4 sm:px-6 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3 text-center" style="font-family:'Montserrat',sans-serif">
+          — DELIVERABLES
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4 text-center leading-tight" style="font-family:'Montserrat',sans-serif">
+          What You Get
+        </h2>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12" style="font-family:'Poppins',sans-serif">
+          Every CEIG drawing package is stamped by a licensed electrical engineer and formatted to your state DISCOM's submission requirements.
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {deliverables.map((item) => (
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:border-[#149C68]/30 hover:shadow-md transition-all duration-300">
+              <div class="text-3xl mb-4">{item.icon}</div>
+              <h3 class="text-base font-black text-gray-900 mb-2" style="font-family:'Montserrat',sans-serif">{item.title}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why CEIG Matters -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+              — WHY IT MATTERS
+            </p>
+            <h2 class="text-3xl font-black text-gray-900 mb-6" style="font-family:'Montserrat',sans-serif">
+              Importance of CEIG-Compliant Solar Design
+            </h2>
+            <div class="space-y-4 text-gray-600 leading-relaxed" style="font-family:'Poppins',sans-serif">
+              <p>Solar systems connected to the DISCOM grid for net or gross metering require CEIG (Chief Electrical Inspector to Government) approval before energisation. Without proper drawings, your project can face delays, fines, or rejection.</p>
+              <p>Heaven Designs' engineers prepare drawings that match the exact format and technical requirements of each state's CEIG office — reducing revisions and getting your project approved faster.</p>
+              <p>Our CEIG drawing packages are used by 300+ EPC companies across India, covering residential rooftop to utility-scale ground mount installations.</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            {[
+              { title: 'Faster Approvals', desc: 'State-specific formatting reduces CEIG office revision cycles.' },
+              { title: 'IS Standard Compliant', desc: 'All drawings follow IS 732, IS 3043, and relevant BIS standards.' },
+              { title: 'Engineer-Stamped', desc: 'Licensed electrical engineer sign-off included with every set.' },
+              { title: 'Quick Turnaround', desc: '3–5 working days from data receipt to complete drawing package.' },
+              { title: 'Revision Support', desc: 'Free revisions included for CEIG office query responses.' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <div class="w-2 h-2 bg-[#149C68] rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p class="font-bold text-gray-900 text-sm" style="font-family:'Montserrat',sans-serif">{item.title}</p>
+                  <p class="text-gray-500 text-sm" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>

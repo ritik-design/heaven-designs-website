@@ -1,0 +1,90 @@
+---
+const faqs = [
+  {
+    q: 'How long does it take for you to deliver a solar design project?',
+    a: 'Typically, we deliver within 5-7 business days, depending on project complexity.',
+  },
+  {
+    q: 'How do you ensure the accuracy and reliability of your designs?',
+    a: 'Our designs go through multiple stages of quality checks and are based on site-specific data and advanced simulation tools.',
+  },
+  {
+    q: 'What software tools do you use for solar design and engineering?',
+    a: 'We use industry-standard tools including PVSyst, HelioScope, AutoCAD, SolarEdge, and various structural analysis software.',
+  },
+  {
+    q: 'How do you handle compliance with local regulations and standards in different regions?',
+    a: 'Our team stays updated with local codes and regulations across regions to ensure full compliance in every design we deliver.',
+  },
+  {
+    q: 'Do you offer revisions if changes are required after the initial design?',
+    a: 'Yes, we offer revisions based on client feedback and revised site data within the agreed project scope.',
+  },
+  {
+    q: 'Can you assist with obtaining permits for solar projects?',
+    a: 'Yes, we provide permit design packages compliant with AHJ requirements for USA, UK, Australia, and other markets.',
+  },
+  {
+    q: 'What types of solar design services do you offer?',
+    a: 'We offer 3D pre-design, detailed engineering design, ground mount design, rooftop design, permit design, structural engineering, site survey, and technical reports.',
+  },
+  {
+    q: 'What sets Heaven Designs apart from other solar design companies?',
+    a: 'Our combination of speed, accuracy, cost-effectiveness, and global compliance expertise sets us apart. We treat every project as our own.',
+  },
+];
+---
+
+<section class="py-20 bg-white border-t border-gray-100">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <p class="section-label">FAQ</p>
+      <h2 class="text-3xl sm:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
+        Frequently Asked Questions Heaven Designs
+      </h2>
+    </div>
+
+    <div class="space-y-3">
+      {faqs.map((item, i) => (
+        <div class="border border-gray-200 rounded-lg overflow-hidden" data-idx={i}>
+          <button
+            class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors"
+            aria-expanded="false"
+          >
+            <span class="font-semibold text-[#1a1a1a] text-sm pr-4" style="font-family:'Montserrat',sans-serif">{item.q}</span>
+            <div class="w-6 h-6 rounded-full border-2 border-[#149C68] flex items-center justify-center shrink-0">
+              <svg class="faq-icon w-3 h-3 text-[#149C68] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-body hidden border-t border-gray-100 px-6 py-4">
+            <p class="text-[#334155] text-sm leading-relaxed">{item.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="/faqs/" class="btn-primary">Read More</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const body = btn.nextElementSibling as HTMLElement;
+      const icon = btn.querySelector('.faq-icon') as HTMLElement;
+      const isOpen = !body.classList.contains('hidden');
+
+      document.querySelectorAll('.faq-body').forEach((b) => b.classList.add('hidden'));
+      document.querySelectorAll('.faq-icon').forEach((ic) => ic.classList.remove('rotate-180'));
+
+      if (!isOpen) {
+        body.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    });
+  });
+</script>

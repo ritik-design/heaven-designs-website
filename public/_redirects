@@ -1,0 +1,7 @@
+# Slug redirects — old live URLs → new clean slugs
+/our-blog/                                              /blog/                                              301
+/terms-and-condition/                                   /terms/                                             301
+/solar-civil-and-structural-engineering-3/              /solar-civil-and-structural-engineering/            301
+/basic-solar-pre-design-and-post-design/                /solar-3d-pre-design/                               301
+/case-study-page-for-solar-pre-design/                  /our-projects/                                      301
+/detailed-design-for-rooftop-and-ground-mount-solar-projects/ /solar-post-design/                           301

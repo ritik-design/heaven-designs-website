@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Heaven Designs",
+  "description": "Heaven Designs Private Limited is a solar design, engineering and consultancy company based in Surat, Gujarat, India.",
+  "url": "https://heavendesigns.in/about-us/"
+};
+
+const teamMembers = [
+  { name: 'Keyur Rakholiya', role: 'MD & CEO', image: '/images/about/keyur.webp' },
+  { name: 'Akash Hirpara', role: 'MD & CFO', image: '/images/about/team-1.webp' },
+  { name: 'Nirav Dhanani', role: 'MD & CMO', image: '/images/about/team-2.webp' },
+  { name: 'Nimesh Katariya', role: 'General Manager', image: '/images/about/team-3.webp' },
+  { name: 'Kamiyab Ali', role: 'BDM', image: '/images/about/team-4.webp' },
+];
+
+const coreValues = [
+  {
+    icon: '/images/value-icon-1.webp',
+    title: 'Integrity',
+    desc: 'We operate with the highest level of honesty and transparency. Our commitment to ethical practices ensures that we build trust and deliver on our promises.',
+  },
+  {
+    icon: '/images/about/icon-review.webp',
+    title: 'Customer Satisfaction',
+    desc: 'Our clients are at the heart of everything we do. We strive to exceed expectations by providing exceptional service and solutions that meet their needs.',
+  },
+  {
+    icon: '/images/about/icon-growing.webp',
+    title: 'Growing Together',
+    desc: 'We believe in fostering collaboration and mutual growth. By working closely with our clients, employees, and partners, we aim to achieve shared success and drive positive change.',
+  },
+];
+---
+
+<Layout
+  title="About Us – Heaven Designs | Solar Engineering Company in Surat"
+  description="Learn about Heaven Designs Private Limited — India's leading solar design and engineering company. Founded in 2020 by passionate engineers from Surat, Gujarat."
+  canonical="https://heavendesigns.in/about-us/"
+  schema={schema}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="About Us"
+      subtitle="Learn about our journey, our team, and the values that drive us."
+      breadcrumbs={[{ label: 'About Us' }]}
+    />
+
+    <!-- Section 1: About Intro -->
+    <section class="py-16 px-4 sm:px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left: Text -->
+          <div>
+            <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+              — WHO WE ARE
+            </p>
+            <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-6 leading-tight" style="font-family:'Montserrat',sans-serif">
+              About Heaven Designs
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4" style="font-family:'Poppins',sans-serif">
+              Heaven Designs Private Limited is part of Heaven Ventures, founded in 2020 by a group of passionate college friends. Our journey began in our PG room, where we shared a love for renewable energy and a vision to make it an everyday reality.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4" style="font-family:'Poppins',sans-serif">
+              The founding team consists of Keyur (EC Engineer), Akash (Civil Engineer), and Nirav (IT Engineer). Starting with residential rooftop solar installations, we have since expanded to include a wide range of renewable energy solutions.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-8" style="font-family:'Poppins',sans-serif">
+              We are proud to contribute to society by providing sustainable energy solutions. We prioritize customer satisfaction and the growth of our team members.
+            </p>
+            <!-- Stat badges -->
+            <div class="flex flex-wrap gap-4 mb-8">
+              {[
+                { stat: '300+', label: 'Clients' },
+                { stat: '50+', label: 'Engineers' },
+                { stat: '15+', label: 'Countries' },
+              ].map((item) => (
+                <div class="flex flex-col items-center justify-center bg-[#149C68]/10 border border-[#149C68]/20 rounded-xl px-6 py-4 min-w-[100px]">
+                  <span class="text-2xl font-black text-[#149C68]" style="font-family:'Montserrat',sans-serif">{item.stat}</span>
+                  <span class="text-xs font-semibold text-gray-600 uppercase tracking-wider mt-1" style="font-family:'Poppins',sans-serif">{item.label}</span>
+                </div>
+              ))}
+            </div>
+            <a
+              href="https://theheavenventures.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block px-7 py-3 bg-[#149C68] text-white font-semibold rounded-lg hover:bg-[#0f7a50] transition-colors text-sm"
+              style="font-family:'Poppins',sans-serif"
+            >
+              Visit Heaven Venture Website
+            </a>
+          </div>
+          <!-- Right: Image -->
+          <div class="relative">
+            <img
+              src="/images/about/banner.webp"
+              alt="Heaven Designs team"
+              class="w-full rounded-2xl object-cover shadow-xl"
+              loading="lazy"
+            />
+            <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-[#FFA91F] rounded-2xl opacity-20 -z-10"></div>
+            <div class="absolute -top-4 -right-4 w-16 h-16 bg-[#149C68] rounded-full opacity-20 -z-10"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Mission & Vision -->
+    <section class="py-16 px-4 sm:px-6 bg-[#149C68]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Vision -->
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-8 backdrop-blur-sm">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
+                <img src="/images/mission-1.webp" alt="Vision" class="w-8 h-8 object-cover rounded-lg" loading="lazy" />
+              </div>
+              <h3 class="text-2xl font-black text-white" style="font-family:'Montserrat',sans-serif">Our Vision</h3>
+            </div>
+            <p class="text-white/85 leading-relaxed" style="font-family:'Poppins',sans-serif">
+              To become the world's most trusted design engineering and technology company transforming how the world builds, powers and sustains its future.
+            </p>
+          </div>
+          <!-- Mission -->
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-8 backdrop-blur-sm">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
+                <img src="/images/mission-2.webp" alt="Mission" class="w-8 h-8 object-cover rounded-lg" loading="lazy" />
+              </div>
+              <h3 class="text-2xl font-black text-white" style="font-family:'Montserrat',sans-serif">Our Mission</h3>
+            </div>
+            <p class="text-white/85 leading-relaxed" style="font-family:'Poppins',sans-serif">
+              To digitise design and engineering for solar and construction companies worldwide enabling faster, smarter projects through the perfect combination of expert services and innovative technology.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Team -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+          — MEET THE TEAM
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-12 leading-tight" style="font-family:'Montserrat',sans-serif">
+          Our Team
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {teamMembers.map((member) => (
+            <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-[#149C68]/30">
+              <div class="aspect-square overflow-hidden">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-5 text-center">
+                <h3 class="font-bold text-gray-900 text-lg" style="font-family:'Montserrat',sans-serif">{member.name}</h3>
+                <p class="text-[#149C68] text-sm font-semibold mt-1" style="font-family:'Poppins',sans-serif">{member.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Core Values -->
+    <section class="py-16 px-4 sm:px-6 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+          — OUR VALUES
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4 leading-tight" style="font-family:'Montserrat',sans-serif">
+          Values And Philosophy
+        </h2>
+        <h3 class="text-xl font-bold text-gray-700 mb-12" style="font-family:'Montserrat',sans-serif">Our Core Values</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {coreValues.map((val) => (
+            <div class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md hover:border-[#149C68]/30 transition-all duration-300">
+              <div class="w-16 h-16 rounded-xl bg-[#149C68]/10 flex items-center justify-center mb-6">
+                <img src={val.icon} alt={val.title} class="w-9 h-9 object-contain" loading="lazy" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-3" style="font-family:'Montserrat',sans-serif">{val.title}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{val.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>

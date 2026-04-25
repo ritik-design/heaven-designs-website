@@ -1,0 +1,101 @@
+---
+---
+
+<section class="relative min-h-screen flex items-center overflow-hidden pt-[70px]">
+
+  <!-- Solid green background -->
+  <div class="absolute inset-0 bg-[#149C68]"></div>
+
+  <!-- Diagonal white cut at bottom -->
+  <div class="absolute bottom-0 left-0 right-0 z-20 overflow-hidden leading-none">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-16 sm:h-20">
+      <polygon points="0,80 1440,0 1440,80" fill="white"/>
+    </svg>
+  </div>
+
+  <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 w-full py-20">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+      <!-- Left: Branding text -->
+      <div class="text-center lg:text-left">
+        <!-- Big "Heaven Designs" word mark -->
+        <div class="mb-6">
+          <h1 class="text-6xl sm:text-7xl xl:text-8xl font-black text-white leading-none" style="font-family:'Montserrat',sans-serif">
+            Heaven
+          </h1>
+          <h2 class="text-4xl sm:text-5xl xl:text-6xl font-black text-[#FFA91F] leading-none mt-1" style="font-family:'Montserrat',sans-serif">
+            Designs
+          </h2>
+        </div>
+
+        <p class="text-white/85 text-base sm:text-lg leading-relaxed max-w-md mx-auto lg:mx-0 mb-8">
+          One stop solution for Solar Design, Engineering &amp; Consultancy — Utility scale Project Management &amp; Consultancy.
+        </p>
+
+        <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+          <a href="/our-services/"
+            class="inline-block font-semibold text-sm px-7 py-3 rounded border-2 border-white text-white hover:bg-white hover:text-[#149C68] transition-all duration-200"
+            style="font-family:'Poppins',sans-serif">
+            Our Services
+          </a>
+          <a href="/contact-us/"
+            class="inline-block font-semibold text-sm px-7 py-3 rounded bg-[#FFA91F] border-2 border-[#FFA91F] text-white hover:bg-[#e8970d] hover:border-[#e8970d] transition-all duration-200"
+            style="font-family:'Poppins',sans-serif">
+            Get A Quote
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Dashboard mockup card -->
+      <div class="hidden lg:flex justify-center items-center">
+        <div class="relative">
+          <!-- Laptop/dashboard mockup -->
+          <div class="bg-white/10 backdrop-blur-sm border border-white/25 rounded-xl p-6 shadow-2xl w-[420px]">
+            <!-- Mock browser bar -->
+            <div class="flex items-center gap-1.5 mb-4">
+              <div class="w-3 h-3 rounded-full bg-red-400"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+              <div class="w-3 h-3 rounded-full bg-green-400"></div>
+              <div class="flex-1 ml-2 bg-white/20 rounded h-5 px-2 flex items-center">
+                <span class="text-white/60 text-[10px]">app.heavendesigns.in</span>
+              </div>
+            </div>
+            <!-- Mock dashboard content -->
+            <div class="space-y-3">
+              <div class="grid grid-cols-3 gap-2">
+                {['102+ MW', '123+ Clients', '15+ Countries'].map(label => (
+                  <div class="bg-white/15 rounded-lg p-3 text-center">
+                    <div class="text-white font-bold text-sm" style="font-family:'Montserrat',sans-serif">{label.split(' ')[0]}</div>
+                    <div class="text-white/60 text-[10px] mt-0.5">{label.split(' ').slice(1).join(' ')}</div>
+                  </div>
+                ))}
+              </div>
+              <!-- Mock chart bars -->
+              <div class="bg-white/10 rounded-lg p-4">
+                <div class="text-white/60 text-[10px] mb-3 uppercase tracking-wider">Project Pipeline</div>
+                <div class="flex items-end gap-2 h-14">
+                  {[60,80,45,90,70,100,65].map((h) => (
+                    <div class="flex-1 rounded-sm bg-[#FFA91F]/70" style={`height:${h}%`}></div>
+                  ))}
+                </div>
+              </div>
+              <!-- Mock table rows -->
+              {['Solar 3D Pre-Design','Ground Mount','Rooftop Engineering'].map(name => (
+                <div class="flex items-center justify-between bg-white/10 rounded px-3 py-2">
+                  <span class="text-white/80 text-[11px]">{name}</span>
+                  <span class="text-[#FFA91F] text-[10px] font-semibold">Active</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Floating badge -->
+          <div class="absolute -top-4 -right-4 bg-[#FFA91F] text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg" style="font-family:'Poppins',sans-serif">
+            Get MW Scale Design ⚡
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

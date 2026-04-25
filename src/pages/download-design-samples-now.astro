@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+
+const services = [
+  'Solar 3D Pre-Design',
+  'Solar Post-Design',
+  'Solar Rooftop Detailed Engineering Design',
+  'Solar Ground Mount Design',
+  'MW Scale Project Management Consultancy',
+  'Solar Civil & Structural Engineering',
+  'Site Survey & Land Feasibility Services',
+  'Solar Permit Design',
+  'CEIG / Electrical Drawings',
+  'STAAD Pro Report & Calculations',
+];
+
+const sampleTypes = [
+  { icon: '🏠', title: 'Residential Samples', desc: '5 kW, 16 kW, 27 kW rooftop designs with SLD, layout, PVsyst' },
+  { icon: '🏢', title: 'Commercial Samples', desc: '130 kW, 200 kW commercial designs with CEIG drawings' },
+  { icon: '⚡', title: 'Utility Scale Samples', desc: '2 MWp ground mount with civil, structural, and cable layout' },
+  { icon: '📐', title: 'Structural Reports', desc: 'STAAD Pro analysis reports and foundation calculations' },
+  { icon: '🗺️', title: 'Permit Design Samples', desc: 'US/Canada AHJ-ready permit packages with stamped drawings' },
+  { icon: '📊', title: 'PVsyst Reports', desc: 'Full energy simulation reports with P50/P90 and shading analysis' },
+];
+---
+
+<Layout
+  title="Download Solar Design Samples – Heaven Designs | Free Sample Design Package"
+  description="Download free solar design samples from Heaven Designs. Get real engineering deliverables — SLDs, 3D layouts, PVsyst reports, STAAD Pro calculations — for residential, commercial, and utility projects."
+  canonical="https://heavendesigns.in/download-design-samples-now/"
+  noindex={false}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Download Design Samples Now!"
+      subtitle="Get real engineering samples across every project type — before you place your first order"
+      breadcrumbs={[{ label: 'Resources', href: '/resource-center/' }, { label: 'Download Samples' }]}
+    />
+
+    <!-- Main Form Section -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+          <!-- Left: What you get -->
+          <div>
+            <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+              — FREE SAMPLES
+            </p>
+            <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-6 leading-tight" style="font-family:'Montserrat',sans-serif">
+              See Our Engineering Quality — For Free
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-8" style="font-family:'Poppins',sans-serif">
+              We take pride in assisting our EPC clients in reducing project cost by delivering optimised solar design solutions. Fill the form and we'll send you sample design packages specific to your service interest — within 24 hours.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4 mb-8">
+              {sampleTypes.map((item) => (
+                <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                  <span class="text-2xl flex-shrink-0">{item.icon}</span>
+                  <div>
+                    <p class="font-bold text-gray-900 text-sm" style="font-family:'Montserrat',sans-serif">{item.title}</p>
+                    <p class="text-gray-500 text-xs leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div class="bg-[#149C68]/5 border border-[#149C68]/20 rounded-2xl p-5">
+              <h3 class="font-black text-gray-900 mb-3 text-sm" style="font-family:'Montserrat',sans-serif">How It Works</h3>
+              <div class="space-y-3">
+                {[
+                  'Fill the form with your name, email, and service interest',
+                  'Our team reviews your request within a few hours',
+                  'Receive sample design package via email within 24 hours',
+                  'Schedule a free consultation call if needed',
+                ].map((step, i) => (
+                  <div class="flex items-start gap-3">
+                    <div class="w-5 h-5 bg-[#149C68] rounded-full text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</div>
+                    <p class="text-gray-600 text-sm" style="font-family:'Poppins',sans-serif">{step}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+            <h3 class="text-2xl font-black text-gray-900 mb-2" style="font-family:'Montserrat',sans-serif">Request Your Free Samples</h3>
+            <p class="text-gray-500 text-sm mb-6" style="font-family:'Poppins',sans-serif">Fill in your details and we'll send samples tailored to your service interest.</p>
+
+            <form
+              name="download-samples"
+              method="POST"
+              action="/contact-us/?submitted=true"
+              class="space-y-4"
+            >
+              <input type="hidden" name="form-name" value="download-samples" />
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1" style="font-family:'Montserrat',sans-serif">Full Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Your full name"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-[#149C68] focus:ring-2 focus:ring-[#149C68]/20 transition-all"
+                  style="font-family:'Poppins',sans-serif"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1" style="font-family:'Montserrat',sans-serif">Email Address *</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="your@email.com"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-[#149C68] focus:ring-2 focus:ring-[#149C68]/20 transition-all"
+                  style="font-family:'Poppins',sans-serif"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1" style="font-family:'Montserrat',sans-serif">Mobile Number *</label>
+                <input
+                  type="tel"
+                  name="mobile"
+                  required
+                  placeholder="+91 00000 00000"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-[#149C68] focus:ring-2 focus:ring-[#149C68]/20 transition-all"
+                  style="font-family:'Poppins',sans-serif"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1" style="font-family:'Montserrat',sans-serif">Company Name</label>
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Your company or EPC name"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-[#149C68] focus:ring-2 focus:ring-[#149C68]/20 transition-all"
+                  style="font-family:'Poppins',sans-serif"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1" style="font-family:'Montserrat',sans-serif">Service Interest *</label>
+                <select
+                  name="service"
+                  required
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-[#149C68] focus:ring-2 focus:ring-[#149C68]/20 transition-all bg-white"
+                  style="font-family:'Poppins',sans-serif"
+                >
+                  <option value="">Select service type</option>
+                  {services.map((svc) => (
+                    <option value={svc}>{svc}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1" style="font-family:'Montserrat',sans-serif">Project Scale</label>
+                <select
+                  name="scale"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-[#149C68] focus:ring-2 focus:ring-[#149C68]/20 transition-all bg-white"
+                  style="font-family:'Poppins',sans-serif"
+                >
+                  <option value="">Select project scale</option>
+                  <option value="residential">Residential (1–50 kW)</option>
+                  <option value="commercial">Commercial (50 kW – 1 MW)</option>
+                  <option value="utility">Utility Scale (1 MW+)</option>
+                </select>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-[#149C68] text-white font-bold py-3.5 rounded-xl hover:bg-[#117a52] transition-colors duration-200 text-base flex items-center justify-center gap-2"
+                style="font-family:'Montserrat',sans-serif"
+              >
+                Send Me the Samples
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              </button>
+
+              <p class="text-gray-400 text-xs text-center" style="font-family:'Poppins',sans-serif">
+                We respect your privacy. Your details are used only to send you the requested samples.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse Samples -->
+    <section class="py-12 px-4 sm:px-6 bg-gray-50">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-gray-600 mb-4" style="font-family:'Poppins',sans-serif">Want to browse what's available first?</p>
+        <a href="/samples-checklist/" class="inline-flex items-center gap-2 border-2 border-[#149C68] text-[#149C68] font-bold px-6 py-3 rounded-full hover:bg-[#149C68] hover:text-white transition-all duration-200" style="font-family:'Montserrat',sans-serif">
+          View All Sample Types
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

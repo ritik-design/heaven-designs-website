@@ -1,0 +1,195 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "11 MW DC Rooftop Solar Project on Tin Shed in Gulf Country – Case Study",
+  "author": { "@type": "Organization", "name": "Heaven Designs Private Limited" },
+  "publisher": { "@type": "Organization", "name": "Heaven Designs Private Limited", "logo": { "@type": "ImageObject", "url": "https://heavendesigns.in/images/logo.webp" } },
+  "datePublished": "2024-11-01",
+  "description": "How Heaven Designs rescued a stalled 11 MW DC rooftop solar project on tin shed in a Gulf country — delivering ahead of schedule and preventing a ₹5 crore penalty.",
+  "url": "https://heavendesigns.in/comprehensive-solar-design-engineering-and-consultancy-for-a-11-mw-dc-rooftop-project-on-tin-shed-in-gulf-country/"
+};
+
+const challenges = [
+  { icon: '🚨', title: 'Freelancer Failure', desc: 'The original freelance design team became unresponsive mid-project, leaving the EPC without any usable design deliverables and a ticking deadline.' },
+  { icon: '⚖️', title: 'Strict Local Regulations', desc: 'The Gulf country\'s government required meticulous compliance with local electrical and structural codes — leaving no margin for error in documentation.' },
+  { icon: '💰', title: '₹5 Crore Penalty Risk', desc: 'A project completion deadline was tied to a contractual penalty clause. Any delay would result in a ₹5 crore financial penalty for the EPC company.' },
+  { icon: '🏗️', title: 'Complex Tin Shed Structure', desc: 'The 11 MW installation was on a tin shed roof — requiring specialised structural load analysis to ensure the existing structure could safely support the solar array.' },
+];
+
+const objectives = [
+  'Develop accurate, regulation-compliant electrical and structural designs',
+  'Complete the full project design within the deadline to avoid financial penalties',
+  'Provide dedicated on-site consultancy support with responsive communication',
+  'Handle government compliance queries and produce as-built documentation',
+];
+
+const results = [
+  { metric: '11 MW DC', label: 'Project Scale' },
+  { metric: '₹5 Cr', label: 'Penalty Avoided' },
+  { metric: '3 Months', label: 'On-Site Consultancy' },
+  { metric: 'Ahead of Schedule', label: 'Project Completion' },
+];
+---
+
+<Layout
+  title="11 MW DC Rooftop Solar Case Study – Heaven Designs | Gulf Country Project"
+  description="Case study: Heaven Designs rescued a stalled 11 MW DC rooftop solar project on tin shed in a Gulf country — completing ahead of schedule and saving the EPC from a ₹5 crore penalty."
+  canonical="https://heavendesigns.in/comprehensive-solar-design-engineering-and-consultancy-for-a-11-mw-dc-rooftop-project-on-tin-shed-in-gulf-country/"
+  schema={schema}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="11 MW DC Rooftop Project — Gulf Country"
+      subtitle="Comprehensive solar design, engineering & consultancy for a large-scale tin shed rooftop installation"
+      breadcrumbs={[{ label: 'Our Projects', href: '/our-projects/' }, { label: '11 MW Gulf Case Study' }]}
+    />
+
+    <!-- Project Overview -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <span class="inline-block bg-[#149C68]/10 text-[#149C68] text-xs font-bold px-3 py-1 rounded-full mb-4" style="font-family:'Montserrat',sans-serif">CASE STUDY</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-6 leading-tight" style="font-family:'Montserrat',sans-serif">
+              Comprehensive Solar Design, Engineering, and Consultancy for an 11 MW DC Rooftop Project on Tin Shed in Gulf Country
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4" style="font-family:'Poppins',sans-serif">
+              A prominent Mumbai-based solar EPC and O&M company was awarded an 11 MW DC rooftop solar installation project on a tin shed structure in a Gulf country. The project had strict government compliance requirements, a high-value penalty clause, and a design team that had gone unresponsive.
+            </p>
+            <p class="text-gray-600 leading-relaxed" style="font-family:'Poppins',sans-serif">
+              Heaven Designs stepped in to rescue the project — providing on-site consultancy, complete engineering design, and government compliance support — and delivered the project ahead of the contractual deadline.
+            </p>
+          </div>
+
+          <!-- Results grid -->
+          <div class="grid grid-cols-2 gap-4">
+            {results.map((r) => (
+              <div class="bg-gradient-to-br from-[#149C68]/5 to-[#149C68]/10 border border-[#149C68]/20 rounded-2xl p-6 text-center">
+                <p class="text-2xl font-black text-[#149C68] mb-1" style="font-family:'Montserrat',sans-serif">{r.metric}</p>
+                <p class="text-gray-600 text-sm font-medium" style="font-family:'Poppins',sans-serif">{r.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Background -->
+    <section class="py-14 px-4 sm:px-6 bg-gray-50">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">Client Background</h2>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-family:'Poppins',sans-serif">
+          The client is a prominent Mumbai-based solar EPC and O&M company with a strong portfolio of residential and commercial solar installations across India. This was their first major international project — a 11 MW DC rooftop installation on an industrial tin shed in a Gulf country.
+        </p>
+        <p class="text-gray-600 leading-relaxed" style="font-family:'Poppins',sans-serif">
+          The project was high-stakes: a government contract with a strict completion deadline, local regulatory compliance requirements, and contractual penalty clauses that made every day critical.
+        </p>
+      </div>
+    </section>
+
+    <!-- Challenges -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3 text-center" style="font-family:'Montserrat',sans-serif">— THE CHALLENGE</p>
+        <h2 class="text-3xl font-black text-gray-900 mb-4 text-center" style="font-family:'Montserrat',sans-serif">Initial Obstacles</h2>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12" style="font-family:'Poppins',sans-serif">
+          When Heaven Designs was brought in, the project was at a critical juncture with multiple compounding challenges.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-6">
+          {challenges.map((item) => (
+            <div class="bg-gray-50 border border-gray-100 rounded-2xl p-6 hover:border-[#149C68]/30 transition-colors duration-300">
+              <div class="text-3xl mb-4">{item.icon}</div>
+              <h3 class="font-black text-gray-900 text-base mb-2" style="font-family:'Montserrat',sans-serif">{item.title}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Objectives & Approach -->
+    <section class="py-16 px-4 sm:px-6 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">— OBJECTIVES</p>
+            <h2 class="text-3xl font-black text-gray-900 mb-6" style="font-family:'Montserrat',sans-serif">Project Goals</h2>
+            <div class="space-y-3">
+              {objectives.map((obj, i) => (
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 bg-[#149C68] rounded-full text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</div>
+                  <p class="text-gray-600 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{obj}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">— OUR APPROACH</p>
+            <h2 class="text-3xl font-black text-gray-900 mb-6" style="font-family:'Montserrat',sans-serif">Heaven Designs' Solution</h2>
+            <div class="space-y-4">
+              {[
+                { title: 'Onsite Consultancy — 3 Months', desc: 'A dedicated Heaven Designs expert was stationed in the Gulf country for 3 months, providing real-time design support, handling government queries, and coordinating with the local EPC team on site.' },
+                { title: 'Full-Zone Design — 5 Months', desc: 'Comprehensive solar engineering design covering all 11 MW DC of the installation — including structural load analysis for the tin shed, electrical SLDs, cable layouts, earthing plans, and as-built drawings.' },
+                { title: 'Government Compliance Management', desc: 'Heaven Designs managed all technical queries from the local government authority, providing accurate documentation and revised drawings as required for regulatory approval.' },
+                { title: 'Flexibility & Extended Hours', desc: 'Our team made multiple design revisions and worked extended hours to meet every milestone, ensuring the project stayed on track despite the complexity.' },
+              ].map((item) => (
+                <div class="p-4 bg-white rounded-xl border border-gray-100 hover:border-[#149C68]/30 transition-colors duration-300">
+                  <h3 class="font-black text-gray-900 text-sm mb-1" style="font-family:'Montserrat',sans-serif">{item.title}</h3>
+                  <p class="text-gray-500 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="py-14 px-4 sm:px-6 bg-[#149C68]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-sm font-bold tracking-widest text-white/70 uppercase mb-3" style="font-family:'Montserrat',sans-serif">— RESULTS</p>
+            <h2 class="text-3xl font-black text-white mb-6" style="font-family:'Montserrat',sans-serif">Project Delivered Ahead of Schedule</h2>
+            <div class="space-y-3">
+              {[
+                'Project completed ahead of the contractual deadline',
+                'Client avoided the ₹5 crore financial penalty',
+                'All local government compliance documentation accepted first-time',
+                'Established a long-term partnership for future international projects',
+              ].map((point) => (
+                <div class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-[#FFA91F] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <p class="text-white/90 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Testimonial -->
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-8">
+            <svg class="w-8 h-8 text-[#FFA91F] mb-4" fill="currentColor" viewBox="0 0 32 32">
+              <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
+            </svg>
+            <p class="text-white leading-relaxed mb-4 italic" style="font-family:'Poppins',sans-serif">
+              "Their dedication and expertise were crucial in completing our 11 MW DC project on time. Heaven Designs' team went above and beyond — the on-site consultancy, the round-the-clock support, and the quality of the engineering deliverables were exceptional. We now partner with them for all our international projects."
+            </p>
+            <p class="text-white/70 text-sm font-semibold" style="font-family:'Montserrat',sans-serif">— Mumbai-Based Solar EPC Company</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>

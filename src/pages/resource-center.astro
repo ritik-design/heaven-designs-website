@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Footer from '../components/Footer.astro';
+
+const resources = [
+  {
+    category: 'Design Guides',
+    items: [
+      { title: 'Solar 3D Pre-Design Process: Step-by-Step Guide', type: 'PDF Guide', href: '#' },
+      { title: 'PVsyst Report Interpretation Guide', type: 'PDF Guide', href: '#' },
+      { title: 'Rooftop Load Calculation Checklist', type: 'Checklist', href: '#' },
+    ],
+  },
+  {
+    category: 'Engineering Resources',
+    items: [
+      { title: 'STAAD Pro for Solar Structures — Quick Reference', type: 'Reference Sheet', href: '#' },
+      { title: 'Ground Mount Row Spacing Calculator', type: 'Tool', href: '#' },
+      { title: 'CEIG Electrical Drawing Standards', type: 'Standards Guide', href: '#' },
+    ],
+  },
+  {
+    category: 'Project Management',
+    items: [
+      { title: 'MW Scale Solar Project Timeline Template', type: 'Template', href: '#' },
+      { title: 'Procurement Checklist for Solar EPC', type: 'Checklist', href: '#' },
+      { title: 'QA/QC Inspection Report Template', type: 'Template', href: '#' },
+    ],
+  },
+  {
+    category: 'Permit & Compliance',
+    items: [
+      { title: 'US Solar Permit Requirements by State', type: 'Reference Guide', href: '#' },
+      { title: 'AHJ Submission Checklist', type: 'Checklist', href: '#' },
+      { title: 'Net Metering Application Guide', type: 'Guide', href: '#' },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Resource Center – Heaven Designs | Solar Design Tools & Guides"
+  description="Access Heaven Designs' resource center for solar design guides, engineering references, project management templates, and permit compliance resources."
+  canonical="https://heavendesigns.in/resource-center/"
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Resource Center"
+      subtitle="Tools, guides, and references for solar design professionals"
+      breadcrumbs={[{ label: 'Resource Center' }]}
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="section-label">— KNOWLEDGE BASE</p>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2" style="font-family:'Montserrat',sans-serif">
+            Solar Design Resources
+          </h2>
+          <p class="text-gray-500 mt-3 max-w-2xl mx-auto">
+            Everything you need to streamline your solar design and engineering workflow. Updated regularly by our team of 50+ engineers.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-8">
+          {resources.map((section) => (
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+              <div class="bg-[#149C68] px-6 py-4">
+                <h3 class="text-white font-bold text-lg" style="font-family:'Montserrat',sans-serif">
+                  {section.category}
+                </h3>
+              </div>
+              <ul class="divide-y divide-gray-50">
+                {section.items.map((item) => (
+                  <li>
+                    <a
+                      href={item.href}
+                      class="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors group"
+                    >
+                      <div>
+                        <p class="text-sm font-medium text-gray-900 group-hover:text-[#149C68] transition-colors">
+                          {item.title}
+                        </p>
+                        <span class="text-xs text-[#149C68] font-semibold mt-0.5 block">{item.type}</span>
+                      </div>
+                      <svg class="w-4 h-4 text-gray-400 group-hover:text-[#149C68] transition-colors shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                      </svg>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 text-center bg-gray-50 rounded-2xl p-10">
+          <h3 class="text-xl font-bold text-gray-900 mb-3" style="font-family:'Montserrat',sans-serif">
+            Can't Find What You Need?
+          </h3>
+          <p class="text-gray-600 mb-6 max-w-lg mx-auto">
+            Our engineering team is available to answer technical questions and provide custom resources for your specific project needs.
+          </p>
+          <a
+            href="/contact-us/"
+            class="inline-block px-8 py-3 bg-[#FFA91F] text-white font-semibold rounded hover:bg-[#e8970d] transition-colors"
+            style="font-family:'Poppins',sans-serif"
+          >
+            Ask Our Engineers
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>

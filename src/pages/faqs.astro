@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What solar design services do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer detailed engineering design services for residential, commercial, and utility-scale solar projects, including PV system design, structural design, and electrical design."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to deliver solar designs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically, we deliver within 5-7 business days, depending on project complexity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What software do you use for solar design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use industry-standard software like BricsCAD, PVsyst, Helioscope, and SketchUp for accurate and reliable designs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you ensure regulatory compliance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We stay updated with local codes and standards and customize designs to meet all regulatory requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you handle both residential and commercial projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide design services for both residential and commercial projects, tailored to specific requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you ensure design quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our designs go through multiple stages of quality checks and are based on precise site data and advanced simulation tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide permit support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide support for the permitting process, including documentation and compliance checks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Heaven Designs different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our commitment to precision, cost-effectiveness, and customer satisfaction, combined with our expertise and passion for renewable energy, distinguishes us from the competition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simply contact us with your project details, and we'll provide a customized quote and timeline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer ongoing technical support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer ongoing technical support and assistance throughout the project lifecycle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is pricing determined?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our pricing is project-specific, based on scope and complexity, with customized packages available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you handle utility-scale projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our team has extensive experience in handling projects of all scales, including large utility-scale installations."
+      }
+    }
+  ]
+};
+
+const faqs = [
+  {
+    question: "What solar design services do you offer?",
+    answer: "We offer detailed engineering design services for residential, commercial, and utility-scale solar projects, including PV system design, structural design, and electrical design."
+  },
+  {
+    question: "How long does it take to deliver solar designs?",
+    answer: "Typically, we deliver within 5-7 business days, depending on project complexity."
+  },
+  {
+    question: "What software do you use for solar design?",
+    answer: "We use industry-standard software like BricsCAD, PVsyst, Helioscope, and SketchUp for accurate and reliable designs."
+  },
+  {
+    question: "Do you ensure regulatory compliance?",
+    answer: "We stay updated with local codes and standards and customize designs to meet all regulatory requirements."
+  },
+  {
+    question: "Can you handle both residential and commercial projects?",
+    answer: "Yes, we provide design services for both residential and commercial projects, tailored to specific requirements."
+  },
+  {
+    question: "How do you ensure design quality?",
+    answer: "Our designs go through multiple stages of quality checks and are based on precise site data and advanced simulation tools."
+  },
+  {
+    question: "Do you provide permit support?",
+    answer: "Yes, we provide support for the permitting process, including documentation and compliance checks."
+  },
+  {
+    question: "What makes Heaven Designs different?",
+    answer: "Our commitment to precision, cost-effectiveness, and customer satisfaction, combined with our expertise and passion for renewable energy, distinguishes us from the competition."
+  },
+  {
+    question: "How do I get a quote?",
+    answer: "Simply contact us with your project details, and we'll provide a customized quote and timeline."
+  },
+  {
+    question: "Do you offer ongoing technical support?",
+    answer: "Yes, we offer ongoing technical support and assistance throughout the project lifecycle."
+  },
+  {
+    question: "How is pricing determined?",
+    answer: "Our pricing is project-specific, based on scope and complexity, with customized packages available."
+  },
+  {
+    question: "Can you handle utility-scale projects?",
+    answer: "Our team has extensive experience in handling projects of all scales, including large utility-scale installations."
+  }
+];
+---
+
+<Layout
+  title="FAQs – Heaven Designs | Solar Design Frequently Asked Questions"
+  description="Find answers to frequently asked questions about Heaven Designs' solar design and engineering services, delivery times, software used, and pricing."
+  canonical="https://heavendesigns.in/faqs/"
+  schema={schema}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Frequently Asked Questions"
+      subtitle="Find answers to common questions about our solar design services"
+      breadcrumbs={[{ label: 'FAQs' }]}
+    />
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-4xl mx-auto">
+
+        <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+          — FAQ
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4 leading-tight" style="font-family:'Montserrat',sans-serif">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-gray-600 mb-10" style="font-family:'Poppins',sans-serif">
+          Can't find what you're looking for?{' '}
+          <a href="/contact-us/" class="text-[#149C68] font-semibold hover:underline">Contact our team directly.</a>
+        </p>
+
+        <!-- Accordion -->
+        <div class="divide-y divide-gray-100 border border-gray-100 rounded-xl overflow-hidden shadow-sm">
+          {faqs.map((faq, index) => (
+            <div class="bg-white">
+              <button
+                data-faq-btn
+                class="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-800 hover:text-[#149C68] transition-colors duration-200 gap-4"
+                style="font-family:'Montserrat',sans-serif"
+                aria-expanded="false"
+              >
+                <span class="flex items-center gap-3">
+                  <span class="text-[#149C68] font-black text-sm shrink-0" style="font-family:'Montserrat',sans-serif">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  {faq.question}
+                </span>
+                <svg
+                  class="w-5 h-5 shrink-0 text-[#149C68] transition-transform duration-300"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div data-faq-panel class="hidden px-6 pb-5 pt-0">
+                <p class="text-gray-600 text-sm leading-relaxed pl-9" style="font-family:'Poppins',sans-serif">
+                  {faq.answer}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.querySelectorAll('[data-faq-btn]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.nextElementSibling;
+      const icon = btn.querySelector('svg');
+      const isOpen = !panel.classList.contains('hidden');
+      // Close all
+      document.querySelectorAll('[data-faq-panel]').forEach(p => p.classList.add('hidden'));
+      document.querySelectorAll('[data-faq-btn] svg').forEach(i => i.classList.remove('rotate-180'));
+      document.querySelectorAll('[data-faq-btn]').forEach(b => b.classList.remove('text-[#149C68]'));
+      if (!isOpen) {
+        panel.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+        btn.classList.add('text-[#149C68]');
+      }
+    });
+  });
+</script>

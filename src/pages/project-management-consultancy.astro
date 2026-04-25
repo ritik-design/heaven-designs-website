@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Solar Project Management Consultancy",
+  "provider": { "@type": "Organization", "name": "Heaven Designs Private Limited" },
+  "description": "End-to-end solar project management consultancy including site surveys, feasibility assessments, government approvals, engineering design, and statutory compliance for megawatt-scale solar plants.",
+  "url": "https://heavendesigns.in/project-management-consultancy/"
+};
+
+const deliverables = [
+  { icon: '⚡', title: 'Single Line Diagram', desc: 'Complete electrical SLD from panels to grid connection, covering AC/DC sides, protection relays, and metering.' },
+  { icon: '🔌', title: 'Cable Layout', desc: 'DC and AC cable routing plans with cable sizing, conduit paths, and junction box placement across the entire site.' },
+  { icon: '🌍', title: 'Earthing Layout', desc: 'Full earthing network design per IS standards, including GI strip mesh, electrode locations, and bonding connections.' },
+  { icon: '📋', title: 'Bill of Quantity (BOQ)', desc: 'Comprehensive material and equipment list with specifications, makes, quantities, and unit rates for procurement.' },
+  { icon: '🏗️', title: 'Foundation Layout for GI Structure', desc: 'Building and pile/footing layout drawing for GI module mounting structures with dimensions and anchor details.' },
+  { icon: '🔩', title: 'Module Mounting Structure Assembly', desc: 'Detailed MMS assembly drawings including rafter, purlin, post, and clamp configurations for rooftop or ground mount.' },
+  { icon: '✅', title: 'Component & Spec Matching', desc: 'Verification of all equipment specs — panels, inverters, transformers, cables — against project design requirements.' },
+  { icon: '🌤️', title: 'Shadow Analysis & Area Diagram', desc: 'Site-specific shadow analysis showing inter-row shading, near-field obstructions, and optimised array layout.' },
+];
+
+const process = [
+  { step: '01', title: 'Site Survey & Feasibility', desc: 'Virtual simulation and on-site data collection to assess area utilisation and load calculations for optimal plant performance.' },
+  { step: '02', title: 'Engineering Design', desc: 'Complete drawing package covering electrical, structural, civil, and layout drawings for project execution.' },
+  { step: '03', title: 'Government Approvals', desc: 'Handling DISCOM, CEIG, and statutory compliance paperwork for smooth regulatory clearance.' },
+  { step: '04', title: 'Execution Support', desc: 'On-site consultancy support during construction, including component guidance and real-time query resolution.' },
+];
+---
+
+<Layout
+  title="Solar Project Management Consultancy – Heaven Designs | PMC Services India"
+  description="Comprehensive solar project management consultancy for MW-scale solar plants. Site surveys, engineering design, government approvals, and on-site execution support from Heaven Designs."
+  canonical="https://heavendesigns.in/project-management-consultancy/"
+  schema={schema}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Project Management Consultancy"
+      subtitle="End-to-end solar project management — from site survey and feasibility to engineering design, approvals, and on-site execution support"
+      breadcrumbs={[{ label: 'Services', href: '/our-services/' }, { label: 'Project Management Consultancy' }]}
+    />
+
+    <!-- Intro -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+              — PMC SERVICES
+            </p>
+            <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-6 leading-tight" style="font-family:'Montserrat',sans-serif">
+              Optimised Solar Design for Megawatt-Scale Plants
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4" style="font-family:'Poppins',sans-serif">
+              A thorough solar site survey, area utilisation and load calculations, along with a virtual simulation of the solar system, forms the foundation for optimal performance of megawatt-scale solar plants. Our team handles feasibility assessments, government approvals, and statutory compliance paperwork.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-6" style="font-family:'Poppins',sans-serif">
+              We aim at assisting EPC clients in reducing project cost by delivering optimised solar design solutions — from the first site visit to final handover documentation.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span class="bg-[#149C68]/10 text-[#149C68] text-sm font-semibold px-4 py-2 rounded-full" style="font-family:'Poppins',sans-serif">Megawatt Scale</span>
+              <span class="bg-[#149C68]/10 text-[#149C68] text-sm font-semibold px-4 py-2 rounded-full" style="font-family:'Poppins',sans-serif">Rooftop & Ground Mount</span>
+              <span class="bg-[#149C68]/10 text-[#149C68] text-sm font-semibold px-4 py-2 rounded-full" style="font-family:'Poppins',sans-serif">Government Approvals</span>
+            </div>
+          </div>
+          <div class="space-y-4">
+            {process.map((item) => (
+              <div class="flex gap-5 p-5 bg-gray-50 rounded-2xl border border-gray-100 hover:border-[#149C68]/30 transition-colors duration-300">
+                <div class="text-[#149C68] font-black text-2xl leading-none flex-shrink-0" style="font-family:'Montserrat',sans-serif">{item.step}</div>
+                <div>
+                  <h3 class="font-black text-gray-900 text-base mb-1" style="font-family:'Montserrat',sans-serif">{item.title}</h3>
+                  <p class="text-gray-500 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deliverables -->
+    <section class="py-16 px-4 sm:px-6 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3 text-center" style="font-family:'Montserrat',sans-serif">
+          — DELIVERABLES
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4 text-center" style="font-family:'Montserrat',sans-serif">
+          Management Consultancy Package
+        </h2>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12" style="font-family:'Poppins',sans-serif">
+          Every PMC engagement includes a complete engineering and documentation package covering all aspects of project design and execution.
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {deliverables.map((item) => (
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:border-[#149C68]/30 hover:shadow-md transition-all duration-300">
+              <div class="text-3xl mb-3">{item.icon}</div>
+              <h3 class="font-black text-gray-900 text-sm mb-2" style="font-family:'Montserrat',sans-serif">{item.title}</h3>
+              <p class="text-gray-500 text-xs leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="py-14 px-4 sm:px-6 bg-[#149C68]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          {[
+            { value: '300+', label: 'EPC Companies Served' },
+            { value: '50+', label: 'Expert Engineers' },
+            { value: '1000+', label: 'Projects Completed' },
+            { value: '10+', label: 'Countries Covered' },
+          ].map((stat) => (
+            <div>
+              <p class="text-4xl font-black text-white mb-1" style="font-family:'Montserrat',sans-serif">{stat.value}</p>
+              <p class="text-white/80 text-sm font-medium" style="font-family:'Poppins',sans-serif">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>

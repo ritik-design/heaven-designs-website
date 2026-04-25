@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #149C68;
+  --color-primary-dark: #0e7a52;
+  --color-primary-darker: #0a5c3d;
+  --color-amber: #FFA91F;
+  --color-amber-dark: #e8970d;
+  --color-body: #334155;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-btn: 'Poppins', sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    color: #334155;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+/* Section label */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #149C68;
+  margin-bottom: 0.75rem;
+}
+.section-label::before {
+  content: '—';
+  color: #FFA91F;
+}
+
+/* Read more link */
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #149C68;
+  transition: gap 0.2s;
+}
+.read-more:hover { gap: 0.5rem; }
+
+/* Marquee */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* Register button */
+.btn-register {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FFA91F;
+  border: 2px solid #FFA91F;
+  padding: 0.45rem 1.25rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+  white-space: nowrap;
+}
+.btn-register:hover {
+  background: #FFA91F;
+  color: #fff;
+}
+
+/* Primary button */
+.btn-primary {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #149C68;
+  border: 2px solid #149C68;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.btn-primary:hover {
+  background: #149C68;
+  color: #fff;
+}

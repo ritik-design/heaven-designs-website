@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Solar Design Samples – Heaven Designs",
+  "url": "https://heavendesigns.in/samples-checklist/",
+  "description": "Download sample solar design packages — residential, commercial, and utility-scale. See the quality of Heaven Designs' engineering deliverables before you engage."
+};
+
+const categories = [
+  {
+    label: 'Residential',
+    color: 'bg-blue-50 border-blue-200',
+    badge: 'bg-blue-100 text-blue-700',
+    samples: [
+      { title: '5 KW Plant with Battery', specs: '5 kW On-Grid + Battery Backup | Single-phase | Residential Rooftop', tags: ['SLD', '3D Layout', 'PVsyst', 'BOQ'] },
+      { title: '27.36 KW with Micro Inverter', specs: '27.36 kW | Micro Inverter Configuration | Commercial Rooftop', tags: ['SLD', 'String Layout', 'Shading Analysis', 'Equipment Schedule'] },
+      { title: '16 KW with Two Inverters', specs: '16 kW | Dual Inverter | Residential / Small Commercial', tags: ['SLD', 'Cable Layout', 'Earthing', 'PVsyst Report'] },
+    ],
+  },
+  {
+    label: 'Commercial',
+    color: 'bg-amber-50 border-amber-200',
+    badge: 'bg-amber-100 text-amber-700',
+    samples: [
+      { title: '130 KW Commercial', specs: '130 kW | Industrial Rooftop | 3-Phase Grid Tied', tags: ['SLD', 'CEIG Drawing', 'Structural Load', 'Cable Schedule'] },
+      { title: '200 KW Commercial', specs: '200 kW | Large Commercial Rooftop | HT Connected', tags: ['SLD', 'CEIG', 'Structural', 'PVsyst', 'BOQ'] },
+    ],
+  },
+  {
+    label: 'Utility Scale',
+    color: 'bg-green-50 border-green-200',
+    badge: 'bg-green-100 text-green-700',
+    samples: [
+      { title: '2000 KW Ground Mount Plant', specs: '2 MWp | Utility Scale | Ground Mount with DC/AC Cable Trenching', tags: ['SLD', 'GA Drawing', 'STAAD Pro', 'Civil Layout', 'Stringing', 'BOQ'] },
+    ],
+  },
+];
+
+const services = [
+  'Solar 3D Pre-Design', 'Solar Post-Design', 'Solar Rooftop Detailed Engineering',
+  'Solar Ground Mount Design', 'MW Scale Project Management', 'Solar Civil & Structural Engineering',
+  'Site Survey & Land Feasibility', 'Solar Permit Design', 'CEIG Drawings', 'STAAD Pro Reports',
+];
+---
+
+<Layout
+  title="Solar Design Samples & Checklist – Heaven Designs | Download Design Examples"
+  description="Browse and download solar design samples from Heaven Designs — residential (5 kW to 27 kW), commercial (130–200 kW), and utility scale (2000 kW ground mount). See our engineering quality before you engage."
+  canonical="https://heavendesigns.in/samples-checklist/"
+  schema={schema}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Solar Design Samples"
+      subtitle="Browse real design samples across residential, commercial, and utility-scale solar projects — and see our engineering quality first-hand"
+      breadcrumbs={[{ label: 'Resource Center', href: '/resource-center/' }, { label: 'Design Samples' }]}
+    />
+
+    <!-- Intro -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+          — PORTFOLIO SAMPLES
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">
+          See the Quality Before You Engage
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-6" style="font-family:'Poppins',sans-serif">
+          We offer complete sample design packages across every project type — so you know exactly what you're getting before placing an order. Each sample mirrors our real production output.
+        </p>
+        <a href="/download-design-samples-now/" class="inline-flex items-center gap-2 bg-[#149C68] text-white font-bold px-6 py-3 rounded-full hover:bg-[#117a52] transition-colors duration-200" style="font-family:'Montserrat',sans-serif">
+          Download All Samples
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Sample Cards -->
+    <section class="py-4 px-4 sm:px-6 bg-gray-50">
+      <div class="max-w-7xl mx-auto space-y-12">
+        {categories.map((cat) => (
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <span class={`text-xs font-bold px-3 py-1 rounded-full ${cat.badge}`} style="font-family:'Montserrat',sans-serif">{cat.label} Solar Design</span>
+              <div class="h-px flex-1 bg-gray-200"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {cat.samples.map((sample) => (
+                <div class={`bg-white rounded-2xl border-2 ${cat.color} p-6 hover:shadow-md transition-all duration-300`}>
+                  <h3 class="font-black text-gray-900 text-base mb-2" style="font-family:'Montserrat',sans-serif">{sample.title}</h3>
+                  <p class="text-gray-500 text-xs mb-4 leading-relaxed" style="font-family:'Poppins',sans-serif">{sample.specs}</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    {sample.tags.map((tag) => (
+                      <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded-full" style="font-family:'Poppins',sans-serif">{tag}</span>
+                    ))}
+                  </div>
+                  <a href="/download-design-samples-now/" class="inline-flex items-center gap-1 text-[#149C68] text-sm font-bold hover:underline" style="font-family:'Montserrat',sans-serif">
+                    Request Sample
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Montserrat',sans-serif">
+              — OUR SERVICES
+            </p>
+            <h2 class="text-3xl font-black text-gray-900 mb-6" style="font-family:'Montserrat',sans-serif">
+              Sample Available for Every Service
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6" style="font-family:'Poppins',sans-serif">
+              We take pride in assisting our EPC clients in reducing project cost by delivering optimised solar design solutions. Samples are available for all our service categories.
+            </p>
+            <a href="/download-design-samples-now/" class="inline-flex items-center gap-2 bg-[#FFA91F] text-white font-bold px-6 py-3 rounded-full hover:bg-[#e8961a] transition-colors duration-200" style="font-family:'Montserrat',sans-serif">
+              Download Samples Now
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            </a>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            {services.map((svc) => (
+              <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100">
+                <div class="w-2 h-2 bg-[#149C68] rounded-full flex-shrink-0"></div>
+                <span class="text-gray-700 text-sm font-medium" style="font-family:'Poppins',sans-serif">{svc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>

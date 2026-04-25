@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Footer from '../components/Footer.astro';
+
+const reports = [
+  {
+    title: 'PVsyst Energy Simulation Report',
+    desc: 'Detailed energy production forecasts, performance ratio analysis, loss breakdown, and shading analysis for solar projects.',
+    icon: '📊',
+  },
+  {
+    title: 'Shading Analysis Report',
+    desc: '3D shading simulations with hourly/monthly analysis, near-shading objects impact, and optimization recommendations.',
+    icon: '☀️',
+  },
+  {
+    title: 'ROI & Financial Projection Report',
+    desc: 'Comprehensive financial analysis including LCOE, payback period, IRR, and 25-year cash flow projections.',
+    icon: '💰',
+  },
+  {
+    title: 'Geo-Technical Report',
+    desc: 'Soil bearing capacity, soil classification, foundation recommendations, and geo-technical analysis for solar sites.',
+    icon: '🏗️',
+  },
+  {
+    title: 'Earth Resistivity Report',
+    desc: 'Soil resistivity testing for grounding system design, Wenner 4-pin method measurements, and grounding recommendations.',
+    icon: '⚡',
+  },
+  {
+    title: 'STAAD Pro Structural Report',
+    desc: 'Structural analysis reports for solar mounting structures including load calculations, stress analysis, and safety factors.',
+    icon: '🔩',
+  },
+];
+---
+
+<Layout
+  title="Reports – Heaven Designs | Solar Engineering Reports & Analysis"
+  description="Comprehensive solar engineering reports including PVsyst simulation, shading analysis, ROI projections, geo-technical reports, and STAAD Pro structural analysis."
+  canonical="https://heavendesigns.in/reports/"
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Reports"
+      subtitle="Comprehensive engineering reports for informed decision-making"
+      breadcrumbs={[{ label: 'Reports' }]}
+    />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="section-label">— DOCUMENTATION</p>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2" style="font-family:'Montserrat',sans-serif">
+            Engineering Reports We Deliver
+          </h2>
+          <p class="text-gray-500 mt-3 max-w-2xl mx-auto">
+            Every Heaven Designs project comes with detailed, professionally prepared reports that support project approvals, client presentations, and construction execution.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {reports.map((r) => (
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:border-[#149C68] hover:shadow-md transition-all duration-200">
+              <div class="text-4xl mb-4">{r.icon}</div>
+              <h3 class="font-bold text-gray-900 text-lg mb-2" style="font-family:'Montserrat',sans-serif">{r.title}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{r.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 bg-[#149C68]/5 border border-[#149C68]/20 rounded-2xl p-8 text-center">
+          <h3 class="text-xl font-bold text-gray-900 mb-3" style="font-family:'Montserrat',sans-serif">
+            Need a Custom Report?
+          </h3>
+          <p class="text-gray-600 mb-6 max-w-lg mx-auto">
+            Contact our team to discuss your specific reporting requirements. We tailor reports to meet AHJ, lender, and client requirements.
+          </p>
+          <a
+            href="/contact-us/"
+            class="inline-block px-8 py-3 bg-[#149C68] text-white font-semibold rounded hover:bg-[#0f7a52] transition-colors"
+            style="font-family:'Poppins',sans-serif"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>
