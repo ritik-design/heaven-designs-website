@@ -1,0 +1,244 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, description, pubDate, author, readTime, heroImage, tags, canonical } = post.data;
+
+const formattedDate = pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const canonicalUrl = canonical || `https://heavendesigns.in/${post.id}/`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  author: { '@type': 'Organization', name: 'Heaven Designs Private Limited' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Heaven Designs Private Limited',
+    logo: { '@type': 'ImageObject', url: 'https://heavendesigns.in/images/logo.webp' },
+  },
+  datePublished: pubDate.toISOString(),
+  image: heroImage.startsWith('http') ? heroImage : `https://heavendesigns.in${heroImage}`,
+  url: canonicalUrl,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+};
+---
+
+<Layout
+  title={`${title} – Heaven Designs Blog`}
+  description={description}
+  canonical={canonicalUrl}
+  type="article"
+  ogImage={heroImage}
+  schema={schema}
+>
+  <Navbar />
+  <main>
+
+    <!-- Article Header Banner -->
+    <section class="relative bg-[#149C68] pt-[70px]">
+      <div class="absolute inset-0 opacity-10">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="1.5" fill="white"/></pattern></defs><rect width="100%" height="100%" fill="url(#dots)"/></svg>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-10 sm:h-14"><polygon points="0,60 1440,0 1440,60" fill="white"/></svg>
+      </div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-14 pb-20">
+        <nav aria-label="Breadcrumb" class="mb-5">
+          <ol class="flex flex-wrap items-center gap-2 text-sm text-white/70">
+            <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+            <li class="opacity-50">›</li>
+            <li><a href="/our-blog/" class="hover:text-white transition-colors">Blog</a></li>
+            <li class="opacity-50">›</li>
+            <li class="text-white font-medium">{title}</li>
+          </ol>
+        </nav>
+        <div class="flex flex-wrap items-center gap-3 mb-5">
+          <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full">{author}</span>
+          <span class="text-white/70 text-sm">{formattedDate}</span>
+          {readTime && (
+            <>
+              <span class="text-white/40">·</span>
+              <span class="text-white/70 text-sm">{readTime}</span>
+            </>
+          )}
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight" style="font-family:'Montserrat',sans-serif">
+          {title}
+        </h1>
+        <p class="mt-4 text-white/80 text-base max-w-2xl leading-relaxed" style="font-family:'Poppins',sans-serif">
+          {description}
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured Image -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 -mt-6 relative z-10 mb-2">
+      <img
+        src={heroImage}
+        alt={title}
+        class="w-full h-64 sm:h-96 object-cover rounded-2xl shadow-xl"
+        loading="eager"
+        width="900" height="500"
+      />
+    </div>
+
+    <!-- Article Body -->
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 py-10" itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content={title} />
+      <meta itemprop="datePublished" content={pubDate.toISOString()} />
+
+      <!-- Author + Share row -->
+      <div class="flex items-center gap-4 pb-8 mb-2 border-b border-gray-100">
+        <div class="w-11 h-11 rounded-full bg-[#149C68] flex items-center justify-center shrink-0">
+          <span class="text-white font-black text-base" style="font-family:'Montserrat',sans-serif">HD</span>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-900 text-sm" style="font-family:'Montserrat',sans-serif" itemprop="author">{author}</p>
+          <p class="text-gray-500 text-xs" style="font-family:'Poppins',sans-serif">
+            {formattedDate}{readTime && ` · ${readTime}`}
+          </p>
+        </div>
+        <div class="ml-auto flex items-center gap-2">
+          <span class="text-xs text-gray-400 mr-1" style="font-family:'Poppins',sans-serif">Share:</span>
+          <a href={`https://twitter.com/intent/tweet?url=${canonicalUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Share on X"
+            class="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#149C68] hover:text-white flex items-center justify-center transition-colors text-gray-600">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${canonicalUrl}`} target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn"
+            class="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#149C68] hover:text-white flex items-center justify-center transition-colors text-gray-600">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <div class="article-body" itemprop="articleBody">
+        <Content />
+      </div>
+
+      <!-- Tags -->
+      {tags.length > 0 && (
+        <div class="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-2 items-center">
+          <span class="text-sm font-semibold text-gray-500 mr-1" style="font-family:'Montserrat',sans-serif">Tags:</span>
+          {tags.map((tag) => (
+            <span class="text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full hover:bg-[#149C68]/10 hover:text-[#149C68] transition-colors cursor-default">{tag}</span>
+          ))}
+        </div>
+      )}
+
+      <!-- Back link -->
+      <div class="mt-10">
+        <a href="/our-blog/" class="inline-flex items-center gap-2 text-[#149C68] font-semibold text-sm hover:gap-3 transition-all duration-200" style="font-family:'Poppins',sans-serif">
+          <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          Back to Blog
+        </a>
+      </div>
+    </article>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+  .article-body p {
+    color: #374151;
+    line-height: 1.7;
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  .article-body h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #111827;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .article-body h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .article-body h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .article-body ul, .article-body ol {
+    margin: 1rem 0 1rem 1.5rem;
+    color: #374151;
+    line-height: 1.7;
+    font-family: 'Poppins', sans-serif;
+  }
+  .article-body ul { list-style: disc; }
+  .article-body ol { list-style: decimal; }
+  .article-body li { margin: 0.4rem 0; }
+  .article-body a {
+    color: #149C68;
+    text-decoration: underline;
+  }
+  .article-body a:hover {
+    color: #0f7d52;
+  }
+  .article-body strong { color: #111827; font-weight: 700; }
+  .article-body blockquote {
+    border-left: 4px solid #149C68;
+    padding: 0.5rem 0 0.5rem 1rem;
+    margin: 1.25rem 0;
+    color: #4b5563;
+    font-style: italic;
+    background: #f9fafb;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .article-body img {
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+    width: 100%;
+    height: auto;
+  }
+  .article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+  }
+  .article-body th, .article-body td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  .article-body th {
+    background: #f3f4f6;
+    font-weight: 700;
+    color: #111827;
+  }
+</style>

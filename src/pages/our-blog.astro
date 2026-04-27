@@ -1,0 +1,262 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Footer from '../components/Footer.astro';
+
+// Tags that aren't useful as a category filter
+const NOISE_TAGS = new Set(['dhara', 'Heaven Designs', 'EPC']);
+
+function deriveCategory(tags: string[]): string {
+  for (const t of tags) {
+    if (!NOISE_TAGS.has(t)) return t;
+  }
+  return 'Solar Design';
+}
+
+function formatDate(d: Date): string {
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+const allPosts = await getCollection('blog');
+const sorted = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const posts = sorted.map((p) => ({
+  title: p.data.title,
+  description: p.data.description,
+  date: formatDate(p.data.pubDate),
+  readTime: p.data.readTime ?? '',
+  img: p.data.heroImage,
+  slug: `/our-blog/${p.id}/`,
+  category: deriveCategory(p.data.tags),
+  searchKey: (p.data.title + ' ' + p.data.description).toLowerCase(),
+}));
+
+const featured = posts[0];
+const rest = posts.slice(1);
+
+const categoryCounts = new Map<string, number>();
+for (const p of posts) categoryCounts.set(p.category, (categoryCounts.get(p.category) ?? 0) + 1);
+const categories = ['All', ...[...categoryCounts.entries()].sort((a, b) => b[1] - a[1]).map((e) => e[0])];
+
+const categoryColors: Record<string, string> = {
+  'Solar Design': 'bg-green-100 text-green-700',
+  'Solar Engineering': 'bg-blue-100 text-blue-700',
+  'Knowledge Base': 'bg-emerald-100 text-emerald-700',
+  'Ultimate Guide': 'bg-purple-100 text-purple-700',
+  'Solar Basics & Consumer Guidance': 'bg-amber-100 text-amber-700',
+  'Solar Policies & Schemes': 'bg-orange-100 text-orange-700',
+  'Solar Industry Trends & Events': 'bg-cyan-100 text-cyan-700',
+  'Solar Design & Engineering': 'bg-teal-100 text-teal-700',
+  'Solar Technology & Innovations': 'bg-indigo-100 text-indigo-700',
+  'Listicle': 'bg-pink-100 text-pink-700',
+  'How-To Guide': 'bg-lime-100 text-lime-700',
+  'Comparison': 'bg-fuchsia-100 text-fuchsia-700',
+  'BESS': 'bg-sky-100 text-sky-700',
+  'Expert Roundup': 'bg-rose-100 text-rose-700',
+  'Problem Solution': 'bg-yellow-100 text-yellow-700',
+};
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Heaven Designs Blog',
+  description: 'Solar design insights, engineering best practices, and industry news from Heaven Designs.',
+  url: 'https://heavendesigns.in/our-blog/',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Heaven Designs Private Limited',
+    logo: { '@type': 'ImageObject', url: 'https://heavendesigns.in/images/logo.webp' },
+  },
+};
+---
+
+<Layout
+  title="Blog – Heaven Designs | Solar Design Insights & Engineering Tips"
+  description="Solar design insights, engineering best practices, project management tips, and industry news from the expert team at Heaven Designs."
+  canonical="https://heavendesigns.in/our-blog/"
+  schema={schema}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Blog"
+      subtitle="Solar design insights, engineering tips, and industry news from our expert team"
+      breadcrumbs={[{ label: 'Blog' }]}
+    />
+
+    <!-- Featured Post -->
+    {featured && (
+      <section class="py-14 px-4 sm:px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="h-0.5 w-8 bg-[#FFA91F] inline-block"></span>
+            <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase" style="font-family:'Montserrat',sans-serif">Featured Article</p>
+          </div>
+          <a href={featured.slug} class="group block">
+            <div class="grid lg:grid-cols-5 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div class="lg:col-span-3 overflow-hidden bg-gray-100" style="min-height:380px">
+                <img src={featured.img} alt={featured.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  style="min-height:380px" loading="eager" />
+              </div>
+              <div class="lg:col-span-2 bg-white p-10 flex flex-col justify-center">
+                <div class="flex flex-wrap items-center gap-3 mb-5">
+                  <span class={`text-xs font-bold px-3 py-1 rounded-full ${categoryColors[featured.category] ?? 'bg-gray-100 text-gray-600'}`}>{featured.category}</span>
+                  <span class="text-xs text-gray-400">{featured.date}</span>
+                  {featured.readTime && <span class="text-xs text-gray-400">· {featured.readTime}</span>}
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-black text-gray-900 leading-snug mb-5 group-hover:text-[#149C68] transition-colors" style="font-family:'Montserrat',sans-serif">
+                  {featured.title}
+                </h2>
+                <p class="text-gray-600 leading-relaxed text-sm mb-8 line-clamp-4" style="font-family:'Poppins',sans-serif">{featured.description}</p>
+                <div class="flex items-center gap-2 text-[#149C68] font-semibold text-sm group-hover:gap-4 transition-all" style="font-family:'Poppins',sans-serif">
+                  Read Article
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    )}
+
+    <!-- Sticky filter bar -->
+    <section class="sticky top-0 z-30 bg-white border-y border-gray-100 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div class="flex flex-wrap gap-2 overflow-x-auto">
+          {categories.map((cat, i) => (
+            <button data-cat={cat}
+              class={`filter-btn text-xs font-semibold px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap ${i === 0 ? 'bg-[#149C68] text-white border-[#149C68]' : 'bg-white text-gray-600 border-gray-200 hover:border-[#149C68] hover:text-[#149C68]'}`}
+              style="font-family:'Poppins',sans-serif">{cat}</button>
+          ))}
+        </div>
+        <div class="relative w-full sm:w-60 shrink-0">
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input id="blog-search" type="search" placeholder="Search articles..."
+            class="w-full pl-9 pr-4 py-2 text-sm border border-gray-200 rounded-full focus:outline-none focus:border-[#149C68] bg-gray-50"
+            style="font-family:'Poppins',sans-serif" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts grid -->
+    <section class="py-14 px-4 sm:px-6 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center gap-3 mb-10">
+          <span class="h-0.5 w-6 bg-[#FFA91F] inline-block"></span>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900" style="font-family:'Montserrat',sans-serif">Latest Articles</h2>
+          <span class="text-sm text-gray-500 ml-auto" style="font-family:'Poppins',sans-serif">{posts.length} articles</span>
+        </div>
+
+        <div id="posts-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          {rest.map((post) => (
+            <article data-category={post.category} data-search={post.searchKey}
+              class="post-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg hover:border-[#149C68]/30 transition-all duration-300 group flex flex-col">
+              <div class="overflow-hidden relative" style="height:210px">
+                <img src={post.img} alt={post.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute top-3 left-3">
+                  <span class={`text-xs font-bold px-2.5 py-1 rounded-full shadow-sm ${categoryColors[post.category] ?? 'bg-gray-100 text-gray-600'}`}>{post.category}</span>
+                </div>
+              </div>
+              <div class="p-5 flex flex-col flex-1">
+                <div class="flex items-center gap-2 text-xs text-gray-400 mb-3" style="font-family:'Poppins',sans-serif">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  {post.date}
+                  {post.readTime && (
+                    <>
+                      <span class="text-gray-300">·</span>
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      {post.readTime}
+                    </>
+                  )}
+                </div>
+                <h3 class="font-black text-gray-900 text-base leading-snug mb-3 group-hover:text-[#149C68] transition-colors" style="font-family:'Montserrat',sans-serif">
+                  {post.title}
+                </h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3 flex-1" style="font-family:'Poppins',sans-serif">{post.description}</p>
+                <a href={post.slug} class="inline-flex items-center gap-1.5 text-[#149C68] text-sm font-semibold hover:gap-3 transition-all duration-200 mt-auto" style="font-family:'Poppins',sans-serif">
+                  Read More
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div id="no-results" class="hidden text-center py-16">
+          <div class="text-5xl mb-4">🔍</div>
+          <h3 class="text-xl font-bold text-gray-700 mb-2" style="font-family:'Montserrat',sans-serif">No articles found</h3>
+          <p class="text-gray-500 text-sm" style="font-family:'Poppins',sans-serif">Try a different search term or category.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-14 px-4 sm:px-6 bg-[#149C68]">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-white/70 text-sm font-semibold uppercase tracking-widest mb-3" style="font-family:'Montserrat',sans-serif">Stay Updated</p>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-4 leading-tight" style="font-family:'Montserrat',sans-serif">
+          Get Solar Design Insights<br class="hidden sm:block" /> Delivered to Your Inbox
+        </h2>
+        <p class="text-white/80 mb-8 max-w-lg mx-auto" style="font-family:'Poppins',sans-serif">
+          Join 2,000+ solar engineers and EPC professionals who get our latest articles, guides, and industry news every month.
+        </p>
+        <form action="#" method="POST" class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+          <input type="email" name="email" placeholder="Enter your email address" required
+            class="flex-1 px-5 py-3.5 rounded-lg text-sm focus:outline-none bg-white/10 border border-white/25 text-white placeholder-white/50"
+            style="font-family:'Poppins',sans-serif" />
+          <button type="submit"
+            class="px-7 py-3.5 bg-[#FFA91F] hover:bg-[#e8970d] text-white font-bold rounded-lg text-sm transition-colors shrink-0"
+            style="font-family:'Montserrat',sans-serif">Subscribe Now</button>
+        </form>
+        <p class="text-white/40 text-xs mt-4" style="font-family:'Poppins',sans-serif">No spam. Unsubscribe anytime.</p>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const postCards = document.querySelectorAll<HTMLElement>('.post-card');
+  const noResults = document.getElementById('no-results')!;
+  const searchInput = document.getElementById('blog-search') as HTMLInputElement;
+  let activeCategory = 'All';
+  let searchQuery = '';
+
+  function filterPosts() {
+    let visible = 0;
+    postCards.forEach(card => {
+      const catMatch = activeCategory === 'All' || card.dataset.category === activeCategory;
+      const searchMatch = !searchQuery || (card.dataset.search ?? '').includes(searchQuery);
+      const show = catMatch && searchMatch;
+      (card as HTMLElement).style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    noResults.classList.toggle('hidden', visible > 0);
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.cat ?? 'All';
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-[#149C68]', 'text-white', 'border-[#149C68]');
+        b.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+      });
+      btn.classList.add('bg-[#149C68]', 'text-white', 'border-[#149C68]');
+      btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
+      filterPosts();
+    });
+  });
+
+  searchInput?.addEventListener('input', e => {
+    searchQuery = (e.target as HTMLInputElement).value.toLowerCase().trim();
+    filterPosts();
+  });
+</script>
