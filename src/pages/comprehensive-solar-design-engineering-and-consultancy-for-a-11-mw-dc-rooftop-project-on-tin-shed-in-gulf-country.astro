@@ -61,10 +61,10 @@ const results = [
             <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-6 leading-tight" style="font-family:'Montserrat',sans-serif">
               Comprehensive Solar Design, Engineering, and Consultancy for an 11 MW DC Rooftop Project on Tin Shed in Gulf Country
             </h2>
-            <p class="text-gray-600 leading-relaxed mb-4" style="font-family:'Poppins',sans-serif">
+            <p class="text-gray-600 leading-relaxed text-lg mb-4" style="font-family:'Poppins',sans-serif">
               A prominent Mumbai-based solar EPC and O&M company was awarded an 11 MW DC rooftop solar installation project on a tin shed structure in a Gulf country. The project had strict government compliance requirements, a high-value penalty clause, and a design team that had gone unresponsive.
             </p>
-            <p class="text-gray-600 leading-relaxed" style="font-family:'Poppins',sans-serif">
+            <p class="text-gray-600 leading-relaxed text-lg" style="font-family:'Poppins',sans-serif">
               Heaven Designs stepped in to rescue the project — providing on-site consultancy, complete engineering design, and government compliance support — and delivered the project ahead of the contractual deadline.
             </p>
           </div>
@@ -74,7 +74,7 @@ const results = [
             {results.map((r) => (
               <div class="bg-gradient-to-br from-[#149C68]/5 to-[#149C68]/10 border border-[#149C68]/20 rounded-2xl p-6 text-center">
                 <p class="text-2xl font-black text-[#149C68] mb-1" style="font-family:'Montserrat',sans-serif">{r.metric}</p>
-                <p class="text-gray-600 text-sm font-medium" style="font-family:'Poppins',sans-serif">{r.label}</p>
+                <p class="text-gray-600 text-lg font-medium" style="font-family:'Poppins',sans-serif">{r.label}</p>
               </div>
             ))}
           </div>
@@ -86,10 +86,10 @@ const results = [
     <section class="py-14 px-4 sm:px-6 bg-gray-50">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">Client Background</h2>
-        <p class="text-gray-600 leading-relaxed mb-4" style="font-family:'Poppins',sans-serif">
+        <p class="text-gray-600 leading-relaxed text-lg mb-4" style="font-family:'Poppins',sans-serif">
           The client is a prominent Mumbai-based solar EPC and O&M company with a strong portfolio of residential and commercial solar installations across India. This was their first major international project — a 11 MW DC rooftop installation on an industrial tin shed in a Gulf country.
         </p>
-        <p class="text-gray-600 leading-relaxed" style="font-family:'Poppins',sans-serif">
+        <p class="text-gray-600 leading-relaxed text-lg" style="font-family:'Poppins',sans-serif">
           The project was high-stakes: a government contract with a strict completion deadline, local regulatory compliance requirements, and contractual penalty clauses that made every day critical.
         </p>
       </div>
@@ -108,7 +108,7 @@ const results = [
             <div class="bg-gray-50 border border-gray-100 rounded-2xl p-6 hover:border-[#149C68]/30 transition-colors duration-300">
               <div class="text-3xl mb-4">{item.icon}</div>
               <h3 class="font-black text-gray-900 text-base mb-2" style="font-family:'Montserrat',sans-serif">{item.title}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+              <p class="text-gray-600 text-lg leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -126,7 +126,7 @@ const results = [
               {objectives.map((obj, i) => (
                 <div class="flex items-start gap-3">
                   <div class="w-6 h-6 bg-[#149C68] rounded-full text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</div>
-                  <p class="text-gray-600 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{obj}</p>
+                  <p class="text-gray-600 text-lg leading-relaxed" style="font-family:'Poppins',sans-serif">{obj}</p>
                 </div>
               ))}
             </div>
@@ -143,8 +143,8 @@ const results = [
                 { title: 'Flexibility & Extended Hours', desc: 'Our team made multiple design revisions and worked extended hours to meet every milestone, ensuring the project stayed on track despite the complexity.' },
               ].map((item) => (
                 <div class="p-4 bg-white rounded-xl border border-gray-100 hover:border-[#149C68]/30 transition-colors duration-300">
-                  <h3 class="font-black text-gray-900 text-sm mb-1" style="font-family:'Montserrat',sans-serif">{item.title}</h3>
-                  <p class="text-gray-500 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+                  <h3 class="font-black text-gray-900 text-lg mb-1" style="font-family:'Montserrat',sans-serif">{item.title}</h3>
+                  <p class="text-gray-500 text-lg leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -169,7 +169,7 @@ const results = [
               ].map((point) => (
                 <div class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-[#FFA91F] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                  <p class="text-white/90 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{point}</p>
+                  <p class="text-white/90 text-lg leading-relaxed" style="font-family:'Poppins',sans-serif">{point}</p>
                 </div>
               ))}
             </div>
