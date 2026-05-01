@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout
+  title="Terms of Service – Heaven Designs"
+  description="Terms of Service for Heaven Designs Private Limited. Read our terms and conditions for solar design and engineering services."
+  canonical="https://heavendesigns.in/terms/"
+  noindex={true}
+>
+  <Navbar />
+  <main>
+    <PageHero
+      title="Terms of Service"
+      subtitle="Please read these terms carefully before using our services"
+      breadcrumbs={[{ label: 'Terms of Service' }]}
+    />
+
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-3xl mx-auto" style="font-family:'Poppins',sans-serif">
+        <p class="text-gray-500 text-sm mb-8">Last updated: November 2024</p>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">1. Acceptance of Terms</h2>
+        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+          By accessing and using the services of Heaven Designs Private Limited, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+        </p>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">2. Services</h2>
+        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+          Heaven Designs provides solar design, engineering, and consultancy services. The scope of services for each project is defined in individual project agreements or purchase orders between Heaven Designs and the client.
+        </p>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">3. Intellectual Property</h2>
+        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+          All design deliverables created by Heaven Designs remain the intellectual property of Heaven Designs until full payment is received. Upon payment, clients receive a license to use the designs for the specified project.
+        </p>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">4. Confidentiality</h2>
+        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+          Both parties agree to maintain the confidentiality of all project-related information. Heaven Designs will not share client project data with third parties without explicit consent.
+        </p>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">5. Limitation of Liability</h2>
+        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+          Heaven Designs' liability is limited to the fees paid for the specific service in question. We are not liable for consequential, incidental, or indirect damages arising from the use of our services.
+        </p>
+
+        <h2 class="text-2xl font-black text-gray-900 mb-4" style="font-family:'Montserrat',sans-serif">6. Contact</h2>
+        <p class="text-gray-600 leading-relaxed text-lg">
+          For questions about these terms, contact us at <a href="mailto:service@heavendesigns.in" class="text-[#149C68] hover:underline">service@heavendesigns.in</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

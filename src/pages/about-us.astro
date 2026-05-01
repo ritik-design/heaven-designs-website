@@ -66,13 +66,13 @@ const coreValues = [
             <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-6 leading-tight" style="font-family:'Montserrat',sans-serif">
               About Heaven Designs
             </h2>
-            <p class="text-gray-600 leading-relaxed mb-4" style="font-family:'Poppins',sans-serif">
+            <p class="text-gray-600 leading-relaxed text-lg mb-4" style="font-family:'Poppins',sans-serif">
               Heaven Designs Private Limited is part of Heaven Ventures, founded in 2020 by a group of passionate college friends. Our journey began in our PG room, where we shared a love for renewable energy and a vision to make it an everyday reality.
             </p>
-            <p class="text-gray-600 leading-relaxed mb-4" style="font-family:'Poppins',sans-serif">
+            <p class="text-gray-600 leading-relaxed text-lg mb-4" style="font-family:'Poppins',sans-serif">
               The founding team consists of Keyur (EC Engineer), Akash (Civil Engineer), and Nirav (IT Engineer). Starting with residential rooftop solar installations, we have since expanded to include a wide range of renewable energy solutions.
             </p>
-            <p class="text-gray-600 leading-relaxed mb-8" style="font-family:'Poppins',sans-serif">
+            <p class="text-gray-600 leading-relaxed text-lg mb-8" style="font-family:'Poppins',sans-serif">
               We are proud to contribute to society by providing sustainable energy solutions. We prioritize customer satisfaction and the growth of our team members.
             </p>
             <!-- Stat badges -->
@@ -125,7 +125,7 @@ const coreValues = [
               </div>
               <h3 class="text-2xl font-black text-white" style="font-family:'Montserrat',sans-serif">Our Vision</h3>
             </div>
-            <p class="text-white/85 leading-relaxed" style="font-family:'Poppins',sans-serif">
+            <p class="text-white/85 leading-relaxed text-lg" style="font-family:'Poppins',sans-serif">
               To become the world's most trusted design engineering and technology company transforming how the world builds, powers and sustains its future.
             </p>
           </div>
@@ -137,7 +137,7 @@ const coreValues = [
               </div>
               <h3 class="text-2xl font-black text-white" style="font-family:'Montserrat',sans-serif">Our Mission</h3>
             </div>
-            <p class="text-white/85 leading-relaxed" style="font-family:'Poppins',sans-serif">
+            <p class="text-white/85 leading-relaxed text-lg" style="font-family:'Poppins',sans-serif">
               To digitise design and engineering for solar and construction companies worldwide enabling faster, smarter projects through the perfect combination of expert services and innovative technology.
             </p>
           </div>
@@ -188,11 +188,11 @@ const coreValues = [
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {coreValues.map((val) => (
             <div class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md hover:border-[#149C68]/30 transition-all duration-300">
-              <div class="w-16 h-16 rounded-xl bg-[#149C68]/10 flex items-center justify-center mb-6">
-                <img src={val.icon} alt={val.title} class="w-9 h-9 object-contain" loading="lazy" />
+              <div class="w-16 h-16 rounded-xl bg-[#0a5c3d] flex items-center justify-center mb-6">
+                <img src={val.icon} alt={val.title} class="w-9 h-9 object-contain brightness-0 invert" loading="lazy" />
               </div>
               <h3 class="text-lg font-bold text-gray-900 mb-3" style="font-family:'Montserrat',sans-serif">{val.title}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed" style="font-family:'Poppins',sans-serif">{val.desc}</p>
+              <p class="text-gray-600 text-lg leading-relaxed" style="font-family:'Poppins',sans-serif">{val.desc}</p>
             </div>
           ))}
         </div>

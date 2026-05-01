@@ -1,0 +1,1510 @@
+[
+  {
+    "slug": "",
+    "file": "index.astro",
+    "status": "ok",
+    "title": {
+      "live": "Heaven Designs - Best Solar Design, Engineering & Consultancy Company",
+      "local": "",
+      "match": true
+    },
+    "desc": {
+      "live": "Heaven Designs Private Limited is a distinguished solar design company based in Surat, Gujarat, India. We specialize in delivering comprehensive and precise",
+      "local": ""
+    },
+    "headings": {
+      "liveCount": 63,
+      "localCount": 0,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "utility scale project management & consultancy",
+        "get mw scale solar project design & engineering",
+        "one stop solution for solar design, engineering & consultancy",
+        "50+ teams",
+        "about heaven designs",
+        "what we have done so far?",
+        "our services",
+        "solar 3d pre-design"
+      ],
+      "onlyLocal": []
+    },
+    "images": {
+      "liveCount": 59,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "heaben-group-photo.png",
+        "about-right-shape-svg.png",
+        "image-51.webp",
+        "image-54.webp",
+        "image-52.webp",
+        "image-53.webp"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 20,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "about-us",
+    "file": "about-us.astro",
+    "status": "ok",
+    "title": {
+      "live": "About Us - Heaven Designs Private Limited",
+      "local": "About Us – Heaven Designs | Solar Engineering Company in Surat",
+      "match": false
+    },
+    "desc": {
+      "live": "Heaven Designs Private Limited is part of Heaven Ventures, founded in 2020 by a group of passionate college friends. Our journey began in our PG room, where",
+      "local": "Learn about Heaven Designs Private Limited — India"
+    },
+    "headings": {
+      "liveCount": 31,
+      "localCount": 8,
+      "jaccard": "0.22",
+      "onlyLive": [
+        "about us",
+        "our mission and vision",
+        "mr. akash hirpara",
+        "mr. keyur rakholiya",
+        "mr. nirav dhanani",
+        "mr. nimesh katariya",
+        "mr. kamiyab ali",
+        "mr. akash hirpara"
+      ],
+      "onlyLocal": [
+        "{member.name}",
+        "{val.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 16,
+      "localCount": 3,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "about-1-1-1-1-1.png",
+        "whatsapp-image-2024-08-27-at-14.18.36_3b2214d9-1024x576.jpg",
+        "whatsapp-image-2024-08-27-at-14.18.37_62a7aa84-1024x964.jpg",
+        "1706269563049.jpeg",
+        "whatsapp-image-2024-11-12-at-18.13.48_391b5fb7-1024x682.jpg",
+        "304799587_1881724635366935_561596611447310089_n-1024x1024.jpg"
+      ],
+      "onlyLocal": [
+        "banner.webp",
+        "mission-1.webp",
+        "mission-2.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 12,
+      "matched": 3,
+      "pct": "25%"
+    }
+  },
+  {
+    "slug": "our-culture",
+    "file": "our-culture.astro",
+    "status": "ok",
+    "title": {
+      "live": "Our Culture - Heaven Designs Private Limited",
+      "local": "Our Culture – Heaven Designs | Life at Heaven Designs",
+      "match": false
+    },
+    "desc": {
+      "live": "Events",
+      "local": "Discover the vibrant culture at Heaven Designs. Team festivals, office trips, training programs and activities that make us a great place to work in Surat, Gujarat."
+    },
+    "headings": {
+      "liveCount": 23,
+      "localCount": 5,
+      "jaccard": "0.22",
+      "onlyLive": [
+        "our culture",
+        "events video",
+        "team feedback video",
+        "call us any time:",
+        "+91 84692 00148",
+        "email us 24/7 hours:",
+        "info@easytechtrading.com",
+        "surat, gujarat."
+      ],
+      "onlyLocal": []
+    },
+    "images": {
+      "liveCount": 32,
+      "localCount": 22,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "img_20231107_102255-300x225.jpg",
+        "img_20231107_085235314-1-300x225.jpg",
+        "img_20231107_085903334-300x226.jpg",
+        "pxl_20231107_050405536-300x225.jpg",
+        "img-20231107-wa0082-300x169.jpg",
+        "whatsapp-image-2024-10-15-at-11.36.58-am-300x169.jpeg"
+      ],
+      "onlyLocal": [
+        "c1.webp",
+        "c13.webp",
+        "c14.webp",
+        "c2.webp",
+        "c4.webp",
+        "c3.webp",
+        "c5.webp",
+        "c15.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 5,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "our-projects",
+    "file": "our-projects.astro",
+    "status": "ok",
+    "title": {
+      "live": "Our Projects - Heaven Designs Private Limited",
+      "local": "Our Projects – Heaven Designs | Solar Design Case Studies",
+      "match": false
+    },
+    "desc": {
+      "live": "Projects",
+      "local": "Explore Heaven Designs"
+    },
+    "headings": {
+      "liveCount": 15,
+      "localCount": 4,
+      "jaccard": "0.06",
+      "onlyLive": [
+        "our projects",
+        "why solar pre design?",
+        "why solar post design?",
+        "why solar detailed engineering design for industrial rooftop?",
+        "why solar detailed engineering design for ground mount solar?",
+        "call us any time:",
+        "+91 84692 00148",
+        "email us 24/7 hours:"
+      ],
+      "onlyLocal": [
+        "{project.title}",
+        "{item.title}",
+        "{item.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 8,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "pic13-1024x542.jpeg-1.webp",
+        "new-1024x543.png-1.webp",
+        "enscape_2020-10-09-18-02-56_scene-1-2-1-1024x576.jpg.webp",
+        "d4.png.webp",
+        "hdpl-logo-1.jpg",
+        "submit-spin.svg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 4,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "our-services",
+    "file": "our-services.astro",
+    "status": "ok",
+    "title": {
+      "live": "Our Services - Heaven Designs Private Limited",
+      "local": "Our Services – Heaven Designs | Solar Design & Engineering Services",
+      "match": false
+    },
+    "desc": {
+      "live": "WORK",
+      "local": "Comprehensive solar design, engineering & consultancy services — 3D Pre-Design, Post Design, Ground Mount, Rooftop Engineering, Permit Design, Civil Structural & more."
+    },
+    "headings": {
+      "liveCount": 27,
+      "localCount": 3,
+      "jaccard": "0.05",
+      "onlyLive": [
+        "basic solar pre-design and post design",
+        "electrical (ceig)drawings",
+        "staad pro report & calculations",
+        "detailed design for rooftop and ground mount solar projects",
+        "solar 3d pre-design",
+        "mw scale detailed engineering design",
+        "mw scale project management consultancy",
+        "solar civil and structural engineering"
+      ],
+      "onlyLocal": [
+        "why choose heaven designs?",
+        "{service.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 16,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "paul-q-2-1024x498.webp",
+        "eco-house.png",
+        "commercial-solar-systems-1024x631.jpg",
+        "solar-panel.png",
+        "屏幕快照-2022-03-02-上午1.webp",
+        "solar-panel-1.png"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 4,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "contact-us",
+    "file": "contact-us.astro",
+    "status": "ok",
+    "title": {
+      "live": "Contact Us - Heaven Designs Private Limited",
+      "local": "Contact Us – Heaven Designs | Get a Solar Design Quote",
+      "match": false
+    },
+    "desc": {
+      "live": "+91 90811 00297",
+      "local": "Contact Heaven Designs for solar design, engineering & consultancy services. Reach us in Surat or Ahmedabad, Gujarat. Call +91 90811 00297."
+    },
+    "headings": {
+      "liveCount": 15,
+      "localCount": 5,
+      "jaccard": "0.33",
+      "onlyLive": [
+        "contact us",
+        "call us any time:",
+        "+91 84692 00148",
+        "email us 24/7 hours:",
+        "info@easytechtrading.com",
+        "surat, gujarat.",
+        "follow us on:",
+        "quick links"
+      ],
+      "onlyLocal": []
+    },
+    "images": {
+      "liveCount": 7,
+      "localCount": 3,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "address.png",
+        "phone-call.png",
+        "email.png",
+        "submit-spin.svg",
+        "hdpl-logo-1.jpg"
+      ],
+      "onlyLocal": [
+        "address.webp",
+        "phone.webp",
+        "email.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 6,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "faqs",
+    "file": "faqs.astro",
+    "status": "ok",
+    "title": {
+      "live": "Faq's - Heaven Designs Private Limited",
+      "local": "FAQs – Heaven Designs | Solar Design Frequently Asked Questions",
+      "match": false
+    },
+    "desc": {
+      "live": "What types of solar design services do you offer?",
+      "local": "Find answers to frequently asked questions about Heaven Designs"
+    },
+    "headings": {
+      "liveCount": 10,
+      "localCount": 1,
+      "jaccard": "0.10",
+      "onlyLive": [
+        "call us any time:",
+        "+91 84692 00148",
+        "email us 24/7 hours:",
+        "info@easytechtrading.com",
+        "surat, gujarat.",
+        "follow us on:",
+        "quick links",
+        "policy page"
+      ],
+      "onlyLocal": []
+    },
+    "images": {
+      "liveCount": 4,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "hdpl-logo-1.jpg",
+        "submit-spin.svg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 21,
+      "matched": 11,
+      "pct": "52%"
+    }
+  },
+  {
+    "slug": "join-our-team",
+    "file": "join-our-team.astro",
+    "status": "ok",
+    "title": {
+      "live": "Join Our Team - Heaven Designs Private Limited",
+      "local": "Join Our Team – Heaven Designs | Solar Engineering Careers in Surat",
+      "match": false
+    },
+    "desc": {
+      "live": "Hiring Why You Should Join Us?  Top-tier compensation: We offer the highest package in the industry. Comprehensive growth: From career advancement to personal",
+      "local": "Build your career in solar energy with Heaven Designs. We"
+    },
+    "headings": {
+      "liveCount": 12,
+      "localCount": 5,
+      "jaccard": "0.13",
+      "onlyLive": [
+        "hiring",
+        "call us any time:",
+        "+91 84692 00148",
+        "email us 24/7 hours:",
+        "info@easytechtrading.com",
+        "surat, gujarat.",
+        "follow us on:",
+        "quick links"
+      ],
+      "onlyLocal": [
+        "submit your application",
+        "{benefit.title}",
+        "{job.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 4,
+      "localCount": 1,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "submit-spin.svg",
+        "hdpl-logo-1.jpg"
+      ],
+      "onlyLocal": [
+        "banner.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 3,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "resource-center",
+    "file": "resource-center.astro",
+    "status": "ok",
+    "title": {
+      "live": "Resource Center - Heaven Designs Private Limited",
+      "local": "Resource Center – Heaven Designs | Solar Design Tools & Guides",
+      "match": false
+    },
+    "desc": {
+      "live": "Blog collection",
+      "local": "Access Heaven Designs"
+    },
+    "headings": {
+      "liveCount": 23,
+      "localCount": 3,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "resource center",
+        "our blog",
+        "in-house vs outsourcing india: solar design",
+        "how to evaluate solar design accuracy:",
+        "solar feasibility study: complete process &",
+        "solar permit design faqs: 20 questions",
+        "rooftop design india: state-wise regulations &",
+        "pvsyst vs helioscope vs autocad: best"
+      ],
+      "onlyLocal": [
+        "solar design resources",
+        "{section.category}",
+        "can't find what you need?"
+      ]
+    },
+    "images": {
+      "liveCount": 11,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "20260421_165823_2c402552.jpg",
+        "cc0515ee6452f1c542b4333170a5ef88.jpg",
+        "20260418_100509_018168e3-1.jpg",
+        "20260418_100607_e829f952.jpg",
+        "20260408_045942_0dff1db8.jpg",
+        "20260408_045902_f7dd7a4f.jpg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 10,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "reports",
+    "file": "reports.astro",
+    "status": "ok",
+    "title": {
+      "live": "Reports - Heaven Designs Private Limited",
+      "local": "Reports – Heaven Designs | Solar Engineering Reports & Analysis",
+      "match": false
+    },
+    "desc": {
+      "live": "WORK",
+      "local": "Comprehensive solar engineering reports including PVsyst simulation, shading analysis, ROI projections, geo-technical reports, and STAAD Pro structural analysis."
+    },
+    "headings": {
+      "liveCount": 23,
+      "localCount": 3,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "reports",
+        "what are the different reports?",
+        "call to action",
+        "key points",
+        "pvsyst report",
+        "staad pro report",
+        "detailed project report (dpr)",
+        "our gallery"
+      ],
+      "onlyLocal": [
+        "engineering reports we deliver",
+        "{r.title}",
+        "need a custom report?"
+      ]
+    },
+    "images": {
+      "liveCount": 20,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "design-build-construction-seko-construction-.jpg",
+        "screenshot-2024-09-12-000220.png",
+        "screenshot-2024-09-11-231650.png",
+        "screenshot-2024-09-12-001524.png",
+        "screenshot-2024-09-12-000848.png",
+        "screenshot-2024-09-12-000430.png"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 7,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "solar-3d-pre-design",
+    "file": "solar-3d-pre-design.astro",
+    "status": "ok",
+    "title": {
+      "live": "Solar 3D Pre-Design - Heaven Designs Private Limited",
+      "local": "Solar 3D Pre-Design Services – Heaven Designs | Solar Layout & Shading Analysis",
+      "match": false
+    },
+    "desc": {
+      "live": "Solar Pre-Design, also known as Solar Preliminary Design, is the first phase in planning a solar project. It involves creating initial drawings and designs",
+      "local": "Professional Solar 3D Pre-Design services using SketchUp & BricsCAD. Accurate shading analysis, PVsyst energy forecasts, and ROI projections for EPC companies worldwide."
+    },
+    "headings": {
+      "liveCount": 37,
+      "localCount": 7,
+      "jaccard": "0.07",
+      "onlyLive": [
+        "solar 3d pre-design",
+        "initial phase of solar project planning",
+        "uses software like sketchup and autocad",
+        "creates a 3d model for visualizing the solar installation",
+        "involves data collection from google maps and client-provided measurements",
+        "includes reports like pvsyst energy forecasts, shading analysis, and roi projections.",
+        "why solar pre-design is crucial for solar epc companies",
+        "solar pre-design is vital for ensuring the success of solar projects. it allows for meticulous planning, builds client trust, mitigates risks, and supports informed decision-making."
+      ],
+      "onlyLocal": [
+        "why solar pre-design is crucial",
+        "types of solar pre-designs",
+        "{benefit.title}",
+        "{type.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 22,
+      "localCount": 2,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "r0.jpg",
+        "01-17-1024x682-1.jpg",
+        "1602750302518-1024x541.jpeg",
+        "3001cdbd8698c231c8b3c96aeef46f34.webp",
+        "1200px-electrical_and_mechanical_services_department_headquarters_photovoltaics-1024x759.jpg",
+        "5kw_gelsons-1024x559.jpg"
+      ],
+      "onlyLocal": [
+        "hero.webp",
+        "img1.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 9,
+      "matched": 1,
+      "pct": "11%"
+    }
+  },
+  {
+    "slug": "solar-post-design",
+    "file": "solar-post-design.astro",
+    "status": "ok",
+    "title": {
+      "live": "Solar Post-Design - Heaven Designs Private Limited",
+      "local": "Solar Post-Design Services – Heaven Designs | Detailed Engineering Design",
+      "match": false
+    },
+    "desc": {
+      "live": "Solar Post-Design is a critical phase that takes place once a client confirms their order and releases a Purchase Order (PO) to the Solar EPC company. This",
+      "local": "Complete solar post-design engineering services. Detailed layout drawings, structural analysis, CEIG drawings, and as-built documentation for EPC companies."
+    },
+    "headings": {
+      "liveCount": 23,
+      "localCount": 3,
+      "jaccard": "0.04",
+      "onlyLive": [
+        "what is solar post-design?",
+        "the importance of solar post-design",
+        "benefits of solar post-design",
+        "how solar post-design works",
+        "why choose our solar post-design services?",
+        "call to action",
+        "our gallery",
+        "contact information"
+      ],
+      "onlyLocal": [
+        "what we deliver",
+        "{d.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 18,
+      "localCount": 1,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "3d-photos0016.jpg",
+        "3d-photos0017.jpg",
+        "rethinking-solar-project-delivery-1536x1536-1.webp",
+        "innovationsinsolar.jpeg",
+        "two-individuals-business-attire-firmly-shake-hands-as-they-stand-proudly-solar-panel-man-shaking-hands-with-engineer-solar-plant-ai-generated_538213-17159.avif",
+        "r1_ihs0006.jpg"
+      ],
+      "onlyLocal": [
+        "service-2.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 6,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "solar-rooftop-detailed-engineering-design",
+    "file": "solar-rooftop-detailed-engineering-design.astro",
+    "status": "ok",
+    "title": {
+      "live": "Solar Rooftop Detailed Engineering Design - Heaven Designs Private Limited",
+      "local": "Solar Rooftop Detailed Engineering Design – Heaven Designs",
+      "match": true
+    },
+    "desc": {
+      "live": "WORK",
+      "local": "Complete detailed engineering design for industrial and commercial rooftop solar projects. CEIG drawings, load calculations, structural analysis, and permit documentation."
+    },
+    "headings": {
+      "liveCount": 36,
+      "localCount": 5,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "solar rooftop detailed engineering design",
+        "what is solar rooftop detailed engineering design?",
+        "key components",
+        "structure design",
+        "boq",
+        "electrical design",
+        "key drawings and documents included",
+        "3d design & shadow analysis"
+      ],
+      "onlyLocal": [
+        "mw scale detailed engineering design",
+        "what's included",
+        "project types we handle",
+        "{item.title}",
+        "{type.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 22,
+      "localCount": 1,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "view-of-1-mwp-rooftop-grid-connected-solar-pv-system.jpg",
+        "course_15830_image-1024x469.jpg",
+        "shutterstock_74230984-scaled-e1633079541632.webp",
+        "img-20190801-wa0041-500x500-1.webp",
+        "solar-plant-bulgaria.jpg",
+        "what-is-solar-earthing.jpeg"
+      ],
+      "onlyLocal": [
+        "service-2.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 7,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "solar-ground-mount-design",
+    "file": "solar-ground-mount-design.astro",
+    "status": "ok",
+    "title": {
+      "live": "Solar Ground Mount Design - Heaven Designs Private Limited",
+      "local": "Solar Ground Mount Design – Heaven Designs | Utility Scale Engineering",
+      "match": false
+    },
+    "desc": {
+      "live": "WORK",
+      "local": "Professional solar ground mount design services for utility and commercial scale projects. Row spacing optimization, structural design, and civil engineering."
+    },
+    "headings": {
+      "liveCount": 28,
+      "localCount": 3,
+      "jaccard": "0.04",
+      "onlyLive": [
+        "our scope work",
+        "site survey and civil engineering",
+        "general arrangement and layouts",
+        "module mounting structure",
+        "electrical engineering design",
+        "documentation and compliance",
+        "auxiliary systems and additional features",
+        "transformer and switchyard design"
+      ],
+      "onlyLocal": [
+        "what we design",
+        "{s.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 19,
+      "localCount": 1,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "1625044060522.jpeg",
+        "droneai-012-012-01.png",
+        "solar-panels-grass-solar-power-plant-solar-power-station-3d-rendering-illustration_581196-58.avif",
+        "screenshot-2024-06-06-164450-1024x727.png",
+        "epr-feb-pg-48-1024x529.jpg",
+        "k12solar-team-table-discussion-1000x686-44-1-360x240.jpg-1.webp"
+      ],
+      "onlyLocal": [
+        "service-1.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 7,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "mw-scale-project-management-consultancy",
+    "file": "mw-scale-project-management-consultancy.astro",
+    "status": "ok",
+    "title": {
+      "live": "MW scale Project management consultancy - Heaven Designs Private Limited",
+      "local": "MW Scale Project Management & Consultancy – Heaven Designs",
+      "match": false
+    },
+    "desc": {
+      "live": "WORK",
+      "local": "End-to-end project management consultancy for utility-scale solar projects. Expert procurement, construction management, QA/QC and commissioning support."
+    },
+    "headings": {
+      "liveCount": 34,
+      "localCount": 5,
+      "jaccard": "0.09",
+      "onlyLive": [
+        "project planning and feasibility",
+        "design and engineering support",
+        "procurement and vendor management",
+        "construction management",
+        "quality assurance and control",
+        "commissioning and handover",
+        "risk management and compliance",
+        "call to action"
+      ],
+      "onlyLocal": [
+        "project gallery",
+        "{service.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 22,
+      "localCount": 1,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "2149192713.jpg",
+        "leonardo_phoenix_create_a_horizontal_image_featuring_an_indian_2-1024x512.jpg",
+        "2148242923.jpg",
+        "125.jpg",
+        "19919.jpg",
+        "30010.jpg"
+      ],
+      "onlyLocal": [
+        "hero.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 8,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "solar-civil-and-structural-engineering-3",
+    "file": "solar-civil-and-structural-engineering-3.astro",
+    "status": "ok",
+    "title": {
+      "live": "Solar Civil and Structural Engineering - Heaven Designs Private Limited",
+      "local": "Solar Civil & Structural Engineering – Heaven Designs | STAAD Pro Analysis",
+      "match": false
+    },
+    "desc": {
+      "live": "WORK",
+      "local": "Expert solar civil and structural engineering services. STAAD Pro structural analysis, foundation design, PEB structures, and civil engineering for solar installations."
+    },
+    "headings": {
+      "liveCount": 28,
+      "localCount": 3,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "solar civil and structural engineering",
+        "solar civil and structural engineering",
+        "key points",
+        "structure analysis & staad pro report",
+        "mcr planning & design",
+        "road, gate, and fencing design",
+        "pile foundation",
+        "transformer foundation"
+      ],
+      "onlyLocal": [
+        "solar civil & structural engineering",
+        "engineering services",
+        "{s.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 22,
+      "localCount": 1,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "adobestock_317669919.jpeg",
+        "screenshot-2024-09-11-215027.png",
+        "mcr.webp",
+        "gate-drawing--1024x578.png",
+        "20111.jpg",
+        "shortage-of-power-transformers-threatens-indias-solar-expansion.jpg"
+      ],
+      "onlyLocal": [
+        "service-4.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 7,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "site-survey-land-feasibility-services",
+    "file": "site-survey-land-feasibility-services.astro",
+    "status": "ok",
+    "title": {
+      "live": "Site Survey & Land Feasibility Services - Heaven Designs Private Limited",
+      "local": "Site Survey & Land Feasibility Services – Heaven Designs | India-Wide",
+      "match": true
+    },
+    "desc": {
+      "live": "WORK",
+      "local": "Professional site survey and land feasibility services across India. Contour mapping, soil testing, geo-technical reports, and Earth Resistivity Reports."
+    },
+    "headings": {
+      "liveCount": 21,
+      "localCount": 5,
+      "jaccard": "0.14",
+      "onlyLive": [
+        "contour mapping survey service across india",
+        "soil test, earth resistivity report, and geo-technical report service across india",
+        "contact information",
+        "hotline",
+        "official email",
+        "our location",
+        "have questions?",
+        "get quote now"
+      ],
+      "onlyLocal": [
+        "contour mapping survey — across india",
+        "soil test, earth resistivity & geo-technical reports"
+      ]
+    },
+    "images": {
+      "liveCount": 14,
+      "localCount": 3,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "solarpark_jannersdorf.jpg",
+        "contour-survey-services-500x500-1.webp",
+        "screenshot-2024-09-11-225507-1024x547.png",
+        "geo-technical-reports-sydney.png",
+        "screenshot-2024-09-11-230601.png",
+        "screenshot-2024-09-11-230519.png"
+      ],
+      "onlyLocal": [
+        "hero.webp",
+        "img1.webp",
+        "img2.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 7,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "solar-permit-design",
+    "file": "solar-permit-design.astro",
+    "status": "ok",
+    "title": {
+      "live": "Solar Permit Design - Heaven Designs Private Limited",
+      "local": "Solar Permit Design Services – Heaven Designs | US & Canada Permit Plan Sets",
+      "match": false
+    },
+    "desc": {
+      "live": "customers",
+      "local": "Professional solar permit design for US and Canada residential and commercial projects. Complete permit plan sets with site plans, single-line diagrams, and equipment specs."
+    },
+    "headings": {
+      "liveCount": 35,
+      "localCount": 5,
+      "jaccard": "0.08",
+      "onlyLive": [
+        "residential solar panel system",
+        "site plan",
+        "roof plan",
+        "cover sheet",
+        "attachment detail",
+        "signage",
+        "single line & three line diagrams",
+        "string layout & bill of material"
+      ],
+      "onlyLocal": [
+        "project gallery",
+        "{f.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 14,
+      "localCount": 1,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "1-1-e1653280667616.png",
+        "screenshot-2024-09-11-231927-1.png",
+        "screenshot-2024-09-11-231842-1.png",
+        "screenshot-2024-09-11-231759-1.png",
+        "screenshot-2024-09-11-231738-1.png",
+        "screenshot-2024-09-11-231713-1.png"
+      ],
+      "onlyLocal": [
+        "hero.webp"
+      ]
+    },
+    "copyMatch": {
+      "liveParas": 6,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "samples-checklist",
+    "file": "samples-checklist.astro",
+    "status": "ok",
+    "title": {
+      "live": "Samples & Checklist - Heaven Designs Private Limited",
+      "local": "Solar Design Samples & Checklist – Heaven Designs | Download Design Examples",
+      "match": false
+    },
+    "desc": {
+      "live": "Solar Designs Samples Residential Solar Design 5 KW PLANT WITH BATTERY 27.36 KW With Micro Inverter 16 KW With Two Inverter Commercial Solar Design 130 KW",
+      "local": "Browse and download solar design samples from Heaven Designs — residential (5 kW to 27 kW), commercial (130–200 kW), and utility scale (2000 kW ground mount). See our engineering quality before you engage."
+    },
+    "headings": {
+      "liveCount": 19,
+      "localCount": 3,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "solar designs samples",
+        "residential solar design",
+        "5 kw plant with battery",
+        "27.36 kw with micro inverter",
+        "16 kw with two inverter",
+        "commercial solar design",
+        "130 kw commercial",
+        "200 kw commercial"
+      ],
+      "onlyLocal": [
+        "see the quality before you engage",
+        "sample available for every service",
+        "{sample.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 7,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "a.webp",
+        "untitled-480-97-270px-960-97-540px-3.webp",
+        "sas-1.webp",
+        "hdpl-logo-1.jpg",
+        "submit-spin.svg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 3,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "privacy-policy",
+    "file": "privacy-policy.astro",
+    "status": "ok",
+    "title": {
+      "live": "Privacy Policy - Heaven Designs Private Limited",
+      "local": "Privacy Policy – Heaven Designs",
+      "match": false
+    },
+    "desc": {
+      "live": "This Privacy Policy governs the manner in which this blog collects, uses, maintains, and discloses information collected from users (each, a “User”) of the",
+      "local": "Read the privacy policy of Heaven Designs Private Limited. Learn how we collect, use, and protect your personal information."
+    },
+    "headings": {
+      "liveCount": 10,
+      "localCount": 5,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "privacy policy",
+        "call us any time:",
+        "+91 84692 00148",
+        "email us 24/7 hours:",
+        "info@easytechtrading.com",
+        "surat, gujarat.",
+        "follow us on:",
+        "quick links"
+      ],
+      "onlyLocal": [
+        "1. information we collect",
+        "2. how we use your information",
+        "3. information sharing",
+        "4. data security",
+        "5. contact us"
+      ]
+    },
+    "images": {
+      "liveCount": 4,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "hdpl-logo-1.jpg",
+        "submit-spin.svg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 25,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "terms-and-condition",
+    "file": "terms-and-condition.astro",
+    "status": "ok",
+    "title": {
+      "live": "Terms And Condition - Heaven Designs Private Limited",
+      "local": "Terms of Service – Heaven Designs",
+      "match": false
+    },
+    "desc": {
+      "live": "OVERVIEW",
+      "local": "Terms of Service for Heaven Designs Private Limited. Read our terms and conditions for solar design and engineering services."
+    },
+    "headings": {
+      "liveCount": 10,
+      "localCount": 6,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "terms and condition",
+        "call us any time:",
+        "+91 84692 00148",
+        "email us 24/7 hours:",
+        "info@easytechtrading.com",
+        "surat, gujarat.",
+        "follow us on:",
+        "quick links"
+      ],
+      "onlyLocal": [
+        "1. acceptance of terms",
+        "2. services",
+        "3. intellectual property",
+        "4. confidentiality",
+        "5. limitation of liability",
+        "6. contact"
+      ]
+    },
+    "images": {
+      "liveCount": 4,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "hdpl-logo-1.jpg",
+        "submit-spin.svg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 69,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "refund-policy",
+    "file": "refund-policy.astro",
+    "status": "ok",
+    "title": {
+      "live": "Refund Policy - Heaven Designs Private Limited",
+      "local": "Refund Policy – Heaven Designs",
+      "match": false
+    },
+    "desc": {
+      "live": "Heaven Designs Is Committed  to providing exceptional service. We want you to feel comfortable about transacting with us. If you want to cancel our services,",
+      "local": "Heaven Designs"
+    },
+    "headings": {
+      "liveCount": 10,
+      "localCount": 5,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "refund policy",
+        "call us any time:",
+        "+91 84692 00148",
+        "email us 24/7 hours:",
+        "info@easytechtrading.com",
+        "surat, gujarat.",
+        "follow us on:",
+        "quick links"
+      ],
+      "onlyLocal": [
+        "our commitment",
+        "how to request a refund",
+        "advance payments",
+        "refund eligibility",
+        "contact us"
+      ]
+    },
+    "images": {
+      "liveCount": 4,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "hdpl-logo-1.jpg",
+        "submit-spin.svg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 6,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "disclosure",
+    "file": "disclosure.astro",
+    "status": "ok",
+    "title": {
+      "live": "Disclosure - Heaven Designs Private Limited",
+      "local": "Disclosure – Heaven Designs",
+      "match": false
+    },
+    "desc": {
+      "live": "This site is not a part of the Facebook™  ( or LinkedIn ) website or Facebook™  ( or LinkedIn )  Inc. Additionally, This site is NOT endorsed by Facebook™  (",
+      "local": "Disclosure statement for Heaven Designs Private Limited. Transparency about our affiliations, content, and service guarantees."
+    },
+    "headings": {
+      "liveCount": 10,
+      "localCount": 5,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "disclosure",
+        "call us any time:",
+        "+91 84692 00148",
+        "email us 24/7 hours:",
+        "info@easytechtrading.com",
+        "surat, gujarat.",
+        "follow us on:",
+        "quick links"
+      ],
+      "onlyLocal": [
+        "platform affiliation disclosure",
+        "no earnings guarantee",
+        "educational content",
+        "our integrity standards",
+        "contact us"
+      ]
+    },
+    "images": {
+      "liveCount": 4,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "hdpl-logo-1.jpg",
+        "submit-spin.svg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 8,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "comprehensive-solar-design-engineering-and-consultancy-for-a-11-mw-dc-rooftop-project-on-tin-shed-in-gulf-country",
+    "file": "comprehensive-solar-design-engineering-and-consultancy-for-a-11-mw-dc-rooftop-project-on-tin-shed-in-gulf-country.astro",
+    "status": "ok",
+    "title": {
+      "live": "Comprehensive Solar Design, Engineering, and Consultancy for a 11 MW DC Rooftop Project on Tin Shed in Gulf Country - Heaven Designs Private Limited",
+      "local": "11 MW DC Rooftop Solar Case Study – Heaven Designs | Gulf Country Project",
+      "match": false
+    },
+    "desc": {
+      "live": "A prominent limited company based in Mumbai, India, specializes in large-scale solar EPC (Engineering, Procurement, and Construction) and O&M (Operations",
+      "local": "Case study: Heaven Designs rescued a stalled 11 MW DC rooftop solar project on tin shed in a Gulf country — completing ahead of schedule and saving the EPC from a ₹5 crore penalty."
+    },
+    "headings": {
+      "liveCount": 29,
+      "localCount": 8,
+      "jaccard": "0.06",
+      "onlyLive": [
+        "case study",
+        "the challenge",
+        "governmental stringency",
+        "high stakes",
+        "objectives",
+        "accurate and compliant design",
+        "timely completion",
+        "reliable consultancy and support"
+      ],
+      "onlyLocal": [
+        "comprehensive solar design, engineering, and consultancy for an 11 mw dc rooftop project on tin shed in gulf country",
+        "project goals",
+        "heaven designs' solution",
+        "project delivered ahead of schedule",
+        "{item.title}",
+        "{item.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 12,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "4279.jpg",
+        "approval.png",
+        "39e5f636-0e47-4013-ab7c-8f9437c28102-ai-2-1024x902.png",
+        "activity.png",
+        "insurance-agent.png",
+        "01-17-1024x682-1.jpg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 3,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "download-design-samples-now",
+    "file": "download-design-samples-now.astro",
+    "status": "ok",
+    "title": {
+      "live": "Download Design Samples Now! - Heaven Designs Private Limited",
+      "local": "Download Solar Design Samples – Heaven Designs | Free Sample Design Package",
+      "match": false
+    },
+    "desc": {
+      "live": "Download Design Samples Now! How can we help?",
+      "local": "Download free solar design samples from Heaven Designs. Get real engineering deliverables — SLDs, 3D layouts, PVsyst reports, STAAD Pro calculations — for residential, commercial, and utility projects."
+    },
+    "headings": {
+      "liveCount": 11,
+      "localCount": 3,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "download design samples now!",
+        "how can we help?",
+        "call us any time:",
+        "+91 84692 00148",
+        "email us 24/7 hours:",
+        "info@easytechtrading.com",
+        "surat, gujarat.",
+        "follow us on:"
+      ],
+      "onlyLocal": [
+        "see our engineering quality — for free",
+        "how it works",
+        "request your free samples"
+      ]
+    },
+    "images": {
+      "liveCount": 4,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "submit-spin.svg",
+        "hdpl-logo-1.jpg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 3,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "electrical-ceig-drawings",
+    "file": "electrical-ceig-drawings.astro",
+    "status": "ok",
+    "title": {
+      "live": "Electrical (CEIG) Drawings - Heaven Designs Private Limited",
+      "local": "Electrical CEIG Drawings – Heaven Designs | Solar Permit & Approval Drawings",
+      "match": false
+    },
+    "desc": {
+      "live": "WORK",
+      "local": "Get CEIG-compliant electrical drawings for solar net metering and gross metering systems. Heaven Designs delivers SLDs, cable layouts, earthing drawings, and DISCOM approval documentation."
+    },
+    "headings": {
+      "liveCount": 22,
+      "localCount": 5,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "electrical (ceig) drawings",
+        "importance of solar pre-design",
+        "required data from client",
+        "2d layout",
+        "panel and inverter details",
+        "inverter brand and ratting",
+        "panels brand and ratting",
+        "meter (al/cu)"
+      ],
+      "onlyLocal": [
+        "discom-ready electrical drawings for solar approval",
+        "what you get",
+        "importance of ceig-compliant solar design",
+        "data required from client",
+        "{item.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 5,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "cei7.png",
+        "hdpl-logo-1.jpg",
+        "submit-spin.svg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 4,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "project-management-consultancy",
+    "file": "project-management-consultancy.astro",
+    "status": "ok",
+    "title": {
+      "live": "Project Management Consultancy - Heaven Designs Private Limited",
+      "local": "Solar Project Management Consultancy – Heaven Designs | PMC Services India",
+      "match": true
+    },
+    "desc": {
+      "live": "WORK",
+      "local": "Comprehensive solar project management consultancy for MW-scale solar plants. Site surveys, engineering design, government approvals, and on-site execution support from Heaven Designs."
+    },
+    "headings": {
+      "liveCount": 20,
+      "localCount": 4,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "project management consultancy",
+        "management consultancy",
+        "required data from client",
+        "single line diagram",
+        "cable layout",
+        "earthing layout",
+        "bill of quantity",
+        "building foundation layout for gi structure"
+      ],
+      "onlyLocal": [
+        "optimised solar design for megawatt-scale plants",
+        "management consultancy package",
+        "{item.title}",
+        "{item.title}"
+      ]
+    },
+    "images": {
+      "liveCount": 5,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "solar-pmc-1-400x315-1.jpg",
+        "hdpl-logo-1.jpg",
+        "submit-spin.svg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 4,
+      "matched": 0,
+      "pct": "0%"
+    }
+  },
+  {
+    "slug": "staad-pro-report-calculations",
+    "file": "staad-pro-report-calculations.astro",
+    "status": "ok",
+    "title": {
+      "live": "Staad Pro Report & Calculations - Heaven Designs Private Limited",
+      "local": "STAAD Pro Report & Calculations – Heaven Designs | Solar Structural Analysis",
+      "match": true
+    },
+    "desc": {
+      "live": "WORK",
+      "local": "Professional STAAD Pro structural analysis for solar mounting systems. Wind load, seismic, and dead load calculations with stamped reports for rooftop and ground mount solar EPC companies."
+    },
+    "headings": {
+      "liveCount": 17,
+      "localCount": 5,
+      "jaccard": "0.00",
+      "onlyLive": [
+        "staad pro report & calculations",
+        "staad pro report & calculations",
+        "required data from client",
+        "sketchup",
+        "pvsyst",
+        "autocad",
+        "solidworks",
+        "staad pro"
+      ],
+      "onlyLocal": [
+        "precision structural analysis for solar mounting systems",
+        "what's included in every report",
+        "engineering software we use",
+        "{item.title}",
+        "{tool.name}"
+      ]
+    },
+    "images": {
+      "liveCount": 5,
+      "localCount": 0,
+      "onlyLive": [
+        "cropped-website-logo.png-1.png",
+        "hdpl-logo-1-1-1024x512.jpg",
+        "image-6.jpg",
+        "hdpl-logo-1.jpg",
+        "submit-spin.svg"
+      ],
+      "onlyLocal": []
+    },
+    "copyMatch": {
+      "liveParas": 4,
+      "matched": 1,
+      "pct": "25%"
+    }
+  }
+]
