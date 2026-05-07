@@ -60,43 +60,43 @@ const schema = {
         <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="1.5" fill="white"/></pattern></defs><rect width="100%" height="100%" fill="url(#dots)"/></svg>
       </div>
       <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
-        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-10 sm:h-14"><polygon points="0,60 1440,0 1440,60" fill="white"/></svg>
+        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-8 sm:h-10 md:h-14"><polygon points="0,60 1440,0 1440,60" fill="white"/></svg>
       </div>
-      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-14 pb-20">
-        <nav aria-label="Breadcrumb" class="mb-5">
-          <ol class="flex flex-wrap items-center gap-2 text-sm text-white/70">
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 pt-10 sm:pt-14 pb-16 sm:pb-20">
+        <nav aria-label="Breadcrumb" class="mb-4 sm:mb-5">
+          <ol class="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-white/70">
             <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
             <li class="opacity-50">›</li>
             <li><a href="/our-blog/" class="hover:text-white transition-colors">Blog</a></li>
             <li class="opacity-50">›</li>
-            <li class="text-white font-medium">{title}</li>
+            <li class="text-white font-medium line-clamp-1">{title}</li>
           </ol>
         </nav>
-        <div class="flex flex-wrap items-center gap-3 mb-5">
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-5">
           <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full">{author}</span>
-          <span class="text-white/70 text-sm">{formattedDate}</span>
+          <span class="text-white/70 text-xs sm:text-sm">{formattedDate}</span>
           {readTime && (
             <>
               <span class="text-white/40">·</span>
-              <span class="text-white/70 text-sm">{readTime}</span>
+              <span class="text-white/70 text-xs sm:text-sm">{readTime}</span>
             </>
           )}
         </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight" style="font-family:'Montserrat',sans-serif">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight break-words" style="font-family:'Montserrat',sans-serif">
           {title}
         </h1>
-        <p class="mt-4 text-white/80 text-base max-w-2xl leading-relaxed" style="font-family:'Poppins',sans-serif">
+        <p class="mt-3 sm:mt-4 text-white/80 text-sm sm:text-base max-w-2xl leading-relaxed" style="font-family:'Poppins',sans-serif">
           {description}
         </p>
       </div>
     </section>
 
     <!-- Featured Image -->
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 -mt-6 relative z-10 mb-2">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 -mt-4 sm:-mt-6 relative z-10 mb-2">
       <img
         src={heroImage}
         alt={title}
-        class="w-full h-64 sm:h-96 object-cover rounded-2xl shadow-xl"
+        class="w-full h-52 sm:h-72 md:h-96 object-cover rounded-2xl shadow-xl"
         loading="eager"
         width="900" height="500"
       />

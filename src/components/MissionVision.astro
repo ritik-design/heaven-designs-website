@@ -1,24 +1,24 @@
 ---
 ---
 
-<section class="py-20 bg-gray-50 border-t border-gray-100">
+<section class="py-14 sm:py-20 bg-gray-50 border-t border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="text-center mb-12">
+    <div class="text-center mb-10 sm:mb-12">
       <p class="section-label">Mission & Vision</p>
-      <h2 class="text-3xl sm:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
         Our Mission and Vision
       </h2>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-10 items-start mb-16">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-10 items-start mb-12 sm:mb-16">
       <!-- Mission photo + text -->
       <div class="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
         <div class="h-52 overflow-hidden">
           <img src="/images/mission-1.webp" alt="Our Mission" class="w-full h-full object-cover" />
         </div>
-        <div class="p-8">
-          <h3 class="text-xl font-bold text-[#149C68] mb-3" style="font-family:'Montserrat',sans-serif">Our Mission</h3>
-          <p class="text-[#334155] leading-relaxed text-lg">
+        <div class="p-6 sm:p-8">
+          <h3 class="text-lg sm:text-xl font-bold text-[#149C68] mb-3" style="font-family:'Montserrat',sans-serif">Our Mission</h3>
+          <p class="text-[#334155] leading-relaxed text-sm sm:text-base">
             To digitise design and engineering for solar and construction companies worldwide, enabling them to build more, faster, and smarter through the perfect combination of expert services and innovative technology.
           </p>
         </div>
@@ -29,9 +29,9 @@
         <div class="h-52 overflow-hidden">
           <img src="/images/mission-2.webp" alt="Our Vision" class="w-full h-full object-cover" />
         </div>
-        <div class="p-8">
-          <h3 class="text-xl font-bold text-[#149C68] mb-3" style="font-family:'Montserrat',sans-serif">Our Vision</h3>
-          <p class="text-[#334155] leading-relaxed text-lg">
+        <div class="p-6 sm:p-8">
+          <h3 class="text-lg sm:text-xl font-bold text-[#149C68] mb-3" style="font-family:'Montserrat',sans-serif">Our Vision</h3>
+          <p class="text-[#334155] leading-relaxed text-sm sm:text-base">
             To become the world's most trusted design engineering and technology company, and to help the world build and sustain its future through the perfect combination of expert services and innovative technology.
           </p>
         </div>
@@ -39,14 +39,14 @@
     </div>
 
     <!-- Core Values -->
-    <div class="text-center mb-10">
+    <div class="text-center mb-8 sm:mb-10">
       <p class="section-label">Core Values</p>
-      <h2 class="text-3xl sm:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
         Our Core Values
       </h2>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
       {[
         {
           title: 'Integrity',
@@ -69,7 +69,7 @@
             <img src={v.img} alt={v.title} class="w-10 h-10 object-contain" />
           </div>
           <h3 class="text-lg font-bold text-[#149C68] mb-3" style="font-family:'Montserrat',sans-serif">{v.title}</h3>
-          <p class="text-[#334155] leading-relaxed text-lg">{v.desc}</p>
+          <p class="text-[#334155] leading-relaxed text-sm sm:text-base">{v.desc}</p>
         </div>
       ))}
     </div>

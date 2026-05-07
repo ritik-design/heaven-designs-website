@@ -62,8 +62,14 @@
 }
 .marquee-track {
   display: flex;
-  animation: marquee 30s linear infinite;
+  animation: marquee 60s linear infinite;
   width: max-content;
+}
+@media (min-width: 640px) {
+  .marquee-track { animation-duration: 45s; }
+}
+@media (min-width: 1024px) {
+  .marquee-track { animation-duration: 35s; }
 }
 .marquee-track:hover { animation-play-state: paused; }
 

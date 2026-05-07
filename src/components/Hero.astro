@@ -3,7 +3,7 @@ const heroImage = '/images/hero-bg.jpg';
 ---
 
 <section
-  class="relative h-screen flex items-center overflow-hidden pt-[70px] bg-cover bg-center"
+  class="relative min-h-[600px] md:min-h-[700px] lg:h-screen flex items-center overflow-hidden pt-[90px] pb-12 md:pb-0 bg-cover bg-center"
   style={`background-image: linear-gradient(90deg, rgba(10,22,40,0.9) 0%, rgba(10,22,40,0.55) 50%, rgba(10,22,40,0.2) 100%), url('${heroImage}');`}
 >
   <!-- extra left-side gradient for legibility on small screens -->
@@ -24,30 +24,30 @@ const heroImage = '/images/hero-bg.jpg';
 
       <!-- Heading -->
       <h1
-        class="text-white font-black leading-[1.05] text-4xl sm:text-5xl xl:text-6xl mb-6"
+        class="text-white font-black leading-[1.1] text-3xl sm:text-4xl md:text-5xl xl:text-6xl mb-5 sm:mb-6"
         style="font-family:'Montserrat',sans-serif"
       >
         Engineered <br />to outperform <br />the spec sheet.
       </h1>
 
       <!-- Sub -->
-      <p class="text-white/85 text-lg sm:text-xl leading-relaxed max-w-xl mb-8">
+      <p class="text-white/85 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl mb-6 sm:mb-8">
         Heaven Designs builds the drawings, calculations, and consultancy that turn solar projects
         into bankable assets — across 15 countries and counting.
       </p>
 
       <!-- CTAs -->
-      <div class="flex flex-wrap gap-4">
+      <div class="flex flex-wrap gap-3 sm:gap-4">
         <a
           href="/contact-us/"
-          class="inline-block px-7 py-3 rounded bg-[#FFA91F] hover:bg-[#e8970d] text-white font-semibold text-sm shadow-xl shadow-orange-500/30 transition"
+          class="inline-block px-5 sm:px-7 py-3 rounded bg-[#FFA91F] hover:bg-[#e8970d] text-white font-semibold text-sm shadow-xl shadow-orange-500/30 transition"
           style="font-family:'Poppins',sans-serif"
         >
           Start Your Project →
         </a>
         <a
           href="/our-services/"
-          class="inline-block px-7 py-3 rounded border-2 border-white/80 hover:bg-white hover:text-[#0a1628] text-white font-semibold text-sm transition"
+          class="inline-block px-5 sm:px-7 py-3 rounded border-2 border-white/80 hover:bg-white hover:text-[#0a1628] text-white font-semibold text-sm transition"
           style="font-family:'Poppins',sans-serif"
         >
           Our Services

@@ -96,22 +96,22 @@ const schema = {
             <p class="text-sm font-bold tracking-widest text-[#149C68] uppercase" style="font-family:'Montserrat',sans-serif">Featured Article</p>
           </div>
           <a href={featured.slug} class="group block">
-            <div class="grid lg:grid-cols-5 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div class="lg:col-span-3 overflow-hidden bg-gray-100" style="min-height:380px">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div class="md:col-span-1 lg:col-span-3 overflow-hidden bg-gray-100">
                 <img src={featured.img} alt={featured.title}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  style="min-height:380px" loading="eager" />
+                  class="w-full h-56 sm:h-72 md:h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  style="min-height:220px" loading="eager" />
               </div>
-              <div class="lg:col-span-2 bg-white p-10 flex flex-col justify-center">
+              <div class="md:col-span-1 lg:col-span-2 bg-white p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
                 <div class="flex flex-wrap items-center gap-3 mb-5">
                   <span class={`text-xs font-bold px-3 py-1 rounded-full ${categoryColors[featured.category] ?? 'bg-gray-100 text-gray-600'}`}>{featured.category}</span>
                   <span class="text-xs text-gray-400">{featured.date}</span>
                   {featured.readTime && <span class="text-xs text-gray-400">· {featured.readTime}</span>}
                 </div>
-                <h2 class="text-2xl sm:text-3xl font-black text-gray-900 leading-snug mb-5 group-hover:text-[#149C68] transition-colors" style="font-family:'Montserrat',sans-serif">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-gray-900 leading-snug mb-4 sm:mb-5 group-hover:text-[#149C68] transition-colors" style="font-family:'Montserrat',sans-serif">
                   {featured.title}
                 </h2>
-                <p class="text-gray-600 leading-relaxed text-lg mb-8 line-clamp-4" style="font-family:'Poppins',sans-serif">{featured.description}</p>
+                <p class="text-gray-600 leading-relaxed text-sm sm:text-base mb-6 sm:mb-8 line-clamp-4" style="font-family:'Poppins',sans-serif">{featured.description}</p>
                 <div class="flex items-center gap-2 text-[#149C68] font-semibold text-sm group-hover:gap-4 transition-all" style="font-family:'Poppins',sans-serif">
                   Read Article
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -125,15 +125,15 @@ const schema = {
 
     <!-- Sticky filter bar -->
     <section class="sticky top-0 z-30 bg-white border-y border-gray-100 shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div class="flex flex-wrap gap-2 overflow-x-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-3.5 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+        <div class="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {categories.map((cat, i) => (
             <button data-cat={cat}
-              class={`filter-btn text-xs font-semibold px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap ${i === 0 ? 'bg-[#149C68] text-white border-[#149C68]' : 'bg-white text-gray-600 border-gray-200 hover:border-[#149C68] hover:text-[#149C68]'}`}
+              class={`filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap shrink-0 ${i === 0 ? 'bg-[#149C68] text-white border-[#149C68]' : 'bg-white text-gray-600 border-gray-200 hover:border-[#149C68] hover:text-[#149C68]'}`}
               style="font-family:'Poppins',sans-serif">{cat}</button>
           ))}
         </div>
-        <div class="relative w-full sm:w-60 shrink-0">
+        <div class="relative w-full md:w-60 shrink-0">
           <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           <input id="blog-search" type="search" placeholder="Search articles..."
             class="w-full pl-9 pr-4 py-2 text-sm border border-gray-200 rounded-full focus:outline-none focus:border-[#149C68] bg-gray-50"
@@ -143,15 +143,15 @@ const schema = {
     </section>
 
     <!-- Posts grid -->
-    <section class="py-14 px-4 sm:px-6 bg-gray-50">
+    <section class="py-12 sm:py-14 px-4 sm:px-6 bg-gray-50">
       <div class="max-w-7xl mx-auto">
-        <div class="flex items-center gap-3 mb-10">
-          <span class="h-0.5 w-6 bg-[#FFA91F] inline-block"></span>
-          <h2 class="text-3xl sm:text-4xl font-black text-gray-900" style="font-family:'Montserrat',sans-serif">Latest Articles</h2>
-          <span class="text-sm text-gray-500 ml-auto" style="font-family:'Poppins',sans-serif">{posts.length} articles</span>
+        <div class="flex items-center gap-3 mb-8 sm:mb-10">
+          <span class="h-0.5 w-6 bg-[#FFA91F] inline-block shrink-0"></span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900" style="font-family:'Montserrat',sans-serif">Latest Articles</h2>
+          <span class="text-xs sm:text-sm text-gray-500 ml-auto whitespace-nowrap" style="font-family:'Poppins',sans-serif">{posts.length} articles</span>
         </div>
 
-        <div id="posts-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div id="posts-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
           {rest.map((post) => (
             <article data-category={post.category} data-search={post.searchKey}
               class="post-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg hover:border-[#149C68]/30 transition-all duration-300 group flex flex-col">
@@ -177,7 +177,7 @@ const schema = {
                 <h3 class="font-black text-gray-900 text-base leading-snug mb-3 group-hover:text-[#149C68] transition-colors" style="font-family:'Montserrat',sans-serif">
                   {post.title}
                 </h3>
-                <p class="text-gray-500 text-lg leading-relaxed mb-4 line-clamp-3 flex-1" style="font-family:'Poppins',sans-serif">{post.description}</p>
+                <p class="text-gray-500 text-sm sm:text-base leading-relaxed mb-4 line-clamp-3 flex-1" style="font-family:'Poppins',sans-serif">{post.description}</p>
                 <a href={post.slug} class="inline-flex items-center gap-1.5 text-[#149C68] text-sm font-semibold hover:gap-3 transition-all duration-200 mt-auto" style="font-family:'Poppins',sans-serif">
                   Read More
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -190,27 +190,27 @@ const schema = {
         <div id="no-results" class="hidden text-center py-16">
           <div class="text-5xl mb-4">🔍</div>
           <h3 class="text-xl font-bold text-gray-700 mb-2" style="font-family:'Montserrat',sans-serif">No articles found</h3>
-          <p class="text-gray-500 text-lg" style="font-family:'Poppins',sans-serif">Try a different search term or category.</p>
+          <p class="text-gray-500 text-sm sm:text-base" style="font-family:'Poppins',sans-serif">Try a different search term or category.</p>
         </div>
       </div>
     </section>
 
     <!-- Newsletter -->
-    <section class="py-14 px-4 sm:px-6 bg-[#149C68]">
+    <section class="py-12 sm:py-14 px-4 sm:px-6 bg-[#149C68]">
       <div class="max-w-3xl mx-auto text-center">
-        <p class="text-white/70 text-sm font-semibold uppercase tracking-widest mb-3" style="font-family:'Montserrat',sans-serif">Stay Updated</p>
-        <h2 class="text-3xl sm:text-4xl font-black text-white mb-4 leading-tight" style="font-family:'Montserrat',sans-serif">
+        <p class="text-white/70 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3" style="font-family:'Montserrat',sans-serif">Stay Updated</p>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-4 leading-tight" style="font-family:'Montserrat',sans-serif">
           Get Solar Design Insights<br class="hidden sm:block" /> Delivered to Your Inbox
         </h2>
-        <p class="text-white/80 mb-8 max-w-lg mx-auto" style="font-family:'Poppins',sans-serif">
+        <p class="text-white/80 mb-6 sm:mb-8 max-w-lg mx-auto text-sm sm:text-base" style="font-family:'Poppins',sans-serif">
           Join 2,000+ solar engineers and EPC professionals who get our latest articles, guides, and industry news every month.
         </p>
         <form action="#" method="POST" class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
           <input type="email" name="email" placeholder="Enter your email address" required
-            class="flex-1 px-5 py-3.5 rounded-lg text-sm focus:outline-none bg-white/10 border border-white/25 text-white placeholder-white/50"
+            class="flex-1 px-5 py-3 sm:py-3.5 rounded-lg text-base focus:outline-none bg-white/10 border border-white/25 text-white placeholder-white/50"
             style="font-family:'Poppins',sans-serif" />
           <button type="submit"
-            class="px-7 py-3.5 bg-[#FFA91F] hover:bg-[#e8970d] text-white font-bold rounded-lg text-sm transition-colors shrink-0"
+            class="px-6 sm:px-7 py-3 sm:py-3.5 bg-[#FFA91F] hover:bg-[#e8970d] text-white font-bold rounded-lg text-sm transition-colors shrink-0"
             style="font-family:'Montserrat',sans-serif">Subscribe Now</button>
         </form>
         <p class="text-white/40 text-xs mt-4" style="font-family:'Poppins',sans-serif">No spam. Unsubscribe anytime.</p>

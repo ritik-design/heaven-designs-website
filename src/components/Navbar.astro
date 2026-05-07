@@ -99,15 +99,36 @@ const navLinks = [
   </nav>
 
   <!-- Mobile menu -->
-  <div id="mob-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 py-3 space-y-0.5">
-    {navLinks.map((link) => (
-      <a href={link.href}
-        class={`block px-3 py-2.5 text-sm font-semibold rounded ${link.active ? 'text-[#FFA91F]' : 'text-[#334155]'}`}
-        style="font-family:'Montserrat',sans-serif">
-        {link.label}
-      </a>
-    ))}
-    <div class="pt-3">
+  <div id="mob-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 py-3 max-h-[calc(100vh-70px)] overflow-y-auto">
+    {navLinks.map((link) =>
+      link.children ? (
+        <details class="mob-acc group border-b border-gray-100 last:border-b-0">
+          <summary class={`flex items-center justify-between px-3 py-3 text-sm font-semibold cursor-pointer list-none ${link.active ? 'text-[#FFA91F]' : 'text-[#334155]'}`}
+            style="font-family:'Montserrat',sans-serif">
+            <a href={link.href} class="flex-1">{link.label}</a>
+            <svg class="w-4 h-4 opacity-60 transition-transform group-open:rotate-180 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="pl-4 pb-2 space-y-0.5">
+            {link.children.map((child) => (
+              <a href={child.href}
+                class="block px-3 py-2 text-[13px] text-[#334155] hover:text-[#149C68] rounded"
+                style="font-family:'Montserrat',sans-serif">
+                {child.label}
+              </a>
+            ))}
+          </div>
+        </details>
+      ) : (
+        <a href={link.href}
+          class={`block px-3 py-3 text-sm font-semibold border-b border-gray-100 last:border-b-0 ${link.active ? 'text-[#FFA91F]' : 'text-[#334155]'}`}
+          style="font-family:'Montserrat',sans-serif">
+          {link.label}
+        </a>
+      )
+    )}
+    <div class="pt-4 pb-2">
       <a href="https://app.heavendesigns.in/register" class="btn-register inline-block">Register Now</a>
     </div>
   </div>
@@ -118,3 +139,7 @@ const navLinks = [
     document.getElementById('mob-menu')?.classList.toggle('hidden');
   });
 </script>
+
+<style>
+  .mob-acc summary::-webkit-details-marker { display: none; }
+</style>

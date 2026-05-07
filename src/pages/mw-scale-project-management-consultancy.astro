@@ -103,10 +103,10 @@ const galleryImages = [
             <p class="text-sm font-semibold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Poppins',sans-serif">
               — PROJECT MANAGEMENT
             </p>
-            <h2 class="text-3xl sm:text-4xl font-black text-[#0f172a] mb-6" style="font-family:'Montserrat',sans-serif">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#0f172a] mb-6" style="font-family:'Montserrat',sans-serif">
               MW Scale Project Management Consultancy
             </h2>
-            <p class="text-gray-600 leading-relaxed text-lg mb-8" style="font-family:'Poppins',sans-serif">
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base mb-8" style="font-family:'Poppins',sans-serif">
               Heaven Designs provides comprehensive project management consultancy services for utility-scale solar projects. Our experienced team guides EPC companies from initial feasibility through commissioning.
             </p>
             <a
@@ -136,7 +136,7 @@ const galleryImages = [
           <p class="text-sm font-semibold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Poppins',sans-serif">
             — SCOPE OF WORK
           </p>
-          <h2 class="text-3xl sm:text-4xl font-black text-[#0f172a]" style="font-family:'Montserrat',sans-serif">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#0f172a]" style="font-family:'Montserrat',sans-serif">
             Key Points
           </h2>
         </div>
@@ -148,7 +148,7 @@ const galleryImages = [
               </div>
               <div>
                 <h3 class="font-bold text-[#0f172a] mb-1" style="font-family:'Montserrat',sans-serif">{service.title}</h3>
-                <p class="text-gray-600 text-lg leading-relaxed" style="font-family:'Poppins',sans-serif">{service.desc}</p>
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed" style="font-family:'Poppins',sans-serif">{service.desc}</p>
               </div>
             </div>
           ))}
@@ -159,14 +159,14 @@ const galleryImages = [
     <!-- Section 3: Benefits -->
     <section class="py-16 bg-[#149C68]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 class="text-3xl sm:text-4xl font-black text-white mb-12 text-center" style="font-family:'Montserrat',sans-serif">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-12 text-center" style="font-family:'Montserrat',sans-serif">
           Benefits
         </h2>
-        <div class="grid sm:grid-cols-3 gap-6">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
           {benefits.map((b) => (
             <div class="bg-white/10 border border-white/20 rounded-xl p-8">
               <p class="text-[#FFA91F] font-black text-2xl mb-3" style="font-family:'Montserrat',sans-serif">{b.num} — {b.title}</p>
-              <p class="text-white/90 leading-relaxed text-lg" style="font-family:'Poppins',sans-serif">{b.desc}</p>
+              <p class="text-white/90 leading-relaxed text-sm sm:text-base" style="font-family:'Poppins',sans-serif">{b.desc}</p>
             </div>
           ))}
         </div>
@@ -176,10 +176,10 @@ const galleryImages = [
     <!-- Section 4: Gallery -->
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 class="text-3xl sm:text-4xl font-black text-[#0f172a] mb-10 text-center" style="font-family:'Montserrat',sans-serif">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#0f172a] mb-10 text-center" style="font-family:'Montserrat',sans-serif">
           Project Gallery
         </h2>
-        <div class="grid sm:grid-cols-3 gap-6">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
           {galleryImages.map((img) => (
             <div class="overflow-hidden rounded-xl shadow-md">
               <img

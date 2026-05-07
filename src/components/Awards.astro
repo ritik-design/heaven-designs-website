@@ -27,16 +27,16 @@ const awards = [
 ];
 ---
 
-<section class="py-20 bg-white border-t border-gray-100">
+<section class="py-14 sm:py-20 bg-white border-t border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="text-center mb-12">
+    <div class="text-center mb-10 sm:mb-12">
       <p class="section-label">Awards and Recognition</p>
-      <h2 class="text-3xl sm:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
         Our Achievements
       </h2>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
       {awards.map((award) => (
         <div class="border border-gray-100 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300 group">
           <!-- Real award photo -->
@@ -49,10 +49,10 @@ const awards = [
           </div>
           <div class="p-5">
             <span class="inline-block bg-[#FFA91F]/15 text-[#FFA91F] text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2">{award.tag}</span>
-            <h3 class="font-bold text-[#149C68] text-lg leading-snug mb-2" style="font-family:'Montserrat',sans-serif">
+            <h3 class="font-bold text-[#149C68] text-base sm:text-lg leading-snug mb-2" style="font-family:'Montserrat',sans-serif">
               {award.title}
             </h3>
-            <p class="text-[#334155] text-lg leading-relaxed">{award.body}</p>
+            <p class="text-[#334155] text-sm sm:text-base leading-relaxed">{award.body}</p>
           </div>
         </div>
       ))}

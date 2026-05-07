@@ -7,25 +7,25 @@ const stats = [
 ];
 ---
 
-<section class="py-16 bg-white border-t border-gray-100">
+<section class="py-12 sm:py-16 bg-white border-t border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="text-center mb-10">
+    <div class="text-center mb-8 sm:mb-10">
       <p class="section-label">Work</p>
-      <h2 class="text-3xl sm:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#1a1a1a]" style="font-family:'Montserrat',sans-serif">
         What We Have Done So Far?
       </h2>
     </div>
 
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
       {stats.map((stat) => (
-        <div class="text-center p-8 border border-gray-100 rounded-lg hover:shadow-md transition-shadow duration-300">
-          <div class="w-14 h-14 rounded-full bg-[#FFA91F]/15 flex items-center justify-center mx-auto mb-4">
-            <img src={stat.img} alt={stat.label} class="w-8 h-8 object-contain" />
+        <div class="text-center p-5 sm:p-8 border border-gray-100 rounded-lg hover:shadow-md transition-shadow duration-300">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FFA91F]/15 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+            <img src={stat.img} alt={stat.label} class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
           </div>
-          <div class="text-4xl font-black text-[#149C68] mb-1" style="font-family:'Montserrat',sans-serif">
+          <div class="text-3xl sm:text-4xl font-black text-[#149C68] mb-1" style="font-family:'Montserrat',sans-serif">
             {stat.value}
           </div>
-          <div class="text-sm text-[#334155] font-medium">{stat.label}</div>
+          <div class="text-xs sm:text-sm text-[#334155] font-medium">{stat.label}</div>
         </div>
       ))}
     </div>

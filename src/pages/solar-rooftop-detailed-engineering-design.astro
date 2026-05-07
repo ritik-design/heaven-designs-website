@@ -68,10 +68,10 @@ const projectTypes = [
             <p class="text-sm font-semibold tracking-widest text-[#149C68] uppercase mb-3" style="font-family:'Poppins',sans-serif">
               — ROOFTOP ENGINEERING
             </p>
-            <h2 class="text-3xl sm:text-4xl font-black text-[#0f172a] mb-6" style="font-family:'Montserrat',sans-serif">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#0f172a] mb-6" style="font-family:'Montserrat',sans-serif">
               MW Scale Detailed Engineering Design
             </h2>
-            <p class="text-gray-600 leading-relaxed text-lg mb-8" style="font-family:'Poppins',sans-serif">
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base mb-8" style="font-family:'Poppins',sans-serif">
               Heaven Designs delivers comprehensive detailed engineering design packages for industrial rooftop and ground-mounted solar projects. Our MW-scale expertise ensures every design meets engineering standards and EPC requirements.
             </p>
             <a
@@ -97,7 +97,7 @@ const projectTypes = [
     <!-- Section 2: Scope -->
     <section class="py-16 bg-[#f9fafb]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 class="text-3xl sm:text-4xl font-black text-[#0f172a] mb-12 text-center" style="font-family:'Montserrat',sans-serif">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#0f172a] mb-12 text-center" style="font-family:'Montserrat',sans-serif">
           What's Included
         </h2>
         <div class="grid sm:grid-cols-2 gap-6">
@@ -108,7 +108,7 @@ const projectTypes = [
               </div>
               <div>
                 <h3 class="font-bold text-[#0f172a] mb-1" style="font-family:'Montserrat',sans-serif">{item.title}</h3>
-                <p class="text-gray-600 text-lg leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed" style="font-family:'Poppins',sans-serif">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -119,16 +119,16 @@ const projectTypes = [
     <!-- Section 3: Project Types -->
     <section class="py-16 bg-[#149C68]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-        <h2 class="text-3xl sm:text-4xl font-black text-white mb-12" style="font-family:'Montserrat',sans-serif">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-12" style="font-family:'Montserrat',sans-serif">
           Project Types We Handle
         </h2>
-        <div class="grid sm:grid-cols-3 gap-6">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
           {projectTypes.map((type) => (
             <div class="bg-white rounded-xl p-6 shadow-md text-left">
               <h3 class="text-lg font-bold text-[#0f172a] mb-3" style="font-family:'Montserrat',sans-serif">
                 {type.title}
               </h3>
-              <p class="text-gray-600 text-lg leading-relaxed" style="font-family:'Poppins',sans-serif">
+              <p class="text-gray-600 text-sm sm:text-base leading-relaxed" style="font-family:'Poppins',sans-serif">
                 {type.desc}
               </p>
             </div>
